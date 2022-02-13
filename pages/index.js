@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-
+        <h1>Just checking that it workd</h1>
       </main>
 
       <footer className={styles.footer}>
