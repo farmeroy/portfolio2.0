@@ -1,6 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import HideNav from '../components/HideNav.jsx'
+import Navbar from '../components/Navbar'
+import profile from '../public/raffe_profile.jpg'
+
 
 export default function Home() {
   return (
@@ -12,21 +16,22 @@ export default function Home() {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
 
+      <Navbar />
+      {/* <HideNav /> */}
+
       <main className={styles.main}>
-        <h1>Just checking that it workd</h1>
+        <h1>Raffaele Cataldo</h1>
+        <h2>Web Developer</h2>
+        <Image alt="a portrait of me" src={profile}/>
+        <Image alt="a portrait of me" src={profile}/>
+        <Image alt="a portrait of me" src={profile}/>
+        <Image alt="a portrait of me" src={profile}/>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+                  <span className={styles.logo}>
+            <Image src="/logo1.svg" alt="Raffaele Cataldo Logo" width={140} height={32} />
           </span>
-        </a>
       </footer>
     </div>
   )
