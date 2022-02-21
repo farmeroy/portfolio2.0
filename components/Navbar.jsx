@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Slide from "@mui/material/Slide";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
-import Image from 'next/Image'
+import Image from 'next/image'
 
 const pages = ["About", "Portfolio", "Contact"];
 
@@ -98,7 +98,7 @@ const Navbar = (props) => {
               component="div"
               sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
             >
-              LOGO
+<Image src="/logo1.svg" alt="Raffaele Cataldo Logo" width={140} height={32} />
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
