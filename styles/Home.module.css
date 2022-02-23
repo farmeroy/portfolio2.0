@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
+
 .container {
   padding: 0 2rem;
+}
+
+.body {
+  font-family: 'Noto Sans Mono', monospace;
 }
 
 .main {
@@ -10,6 +16,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Noto Sans Mono';
 }
 
 .footer {
@@ -106,6 +113,11 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+.hero {
+  width: 100vw;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
