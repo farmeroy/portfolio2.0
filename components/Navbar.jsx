@@ -53,7 +53,7 @@ const Navbar = (props) => {
               component="div"
               sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
             >
-<Image src="/logo1.svg" alt="Raffaele Cataldo Logo" width={140} height={32} />
+              <Image src="/R.svg" alt="Raffaele Cataldo Logo" width={140} height={32} />
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -98,7 +98,7 @@ const Navbar = (props) => {
               component="div"
               sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
             >
-<Image src="/logo1.svg" alt="Raffaele Cataldo Logo" width={140} height={32} />
+<Image src="/R.svg" alt="Raffaele Cataldo Logo" width={140} height={32} />
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
