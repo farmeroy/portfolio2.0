@@ -3,9 +3,9 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar";
 import profile from "../public/raffe_profile.jpg";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import Paper from "@mui/material/Paper"
+import Hero from '../components/sections/Hero'
+import About from '../components/sections/About'
+import {  Container } from '@mui/material'
 
 export default function Home() {
   return (
@@ -16,34 +16,18 @@ export default function Home() {
         <link rel="icon" href="/R.svg" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-
       <Navbar />
-      {/* <HideNav /> */}
-
       <main className={styles.main}>
         <div className={styles.hero}>
- <Paper elevation={0} sx={{padding:20}}>
- <Typography variant="h2" component="div" gutterBottom sx={{fontFamily: 'Noto Sans Mono'}}>
-          Raffaele Cataldo
-        </Typography>
-        <Typography variant="h3" component="div" gutterBottom>
-          Web Developer
-        </Typography>
-        <Button variant="contained" color="secondary" disableElevation>
-          Check Out my Portfolio
-        </Button>
-        <Button variant="outlined" color="secondary">Check out my github</Button>
-
-
-        </Paper>
-
-
+          <Hero />
         </div>
-
-                      <Image alt="a portrait of me" src={profile} />
+        <About />
+                <Container>
         <Image alt="a portrait of me" src={profile} />
         <Image alt="a portrait of me" src={profile} />
         <Image alt="a portrait of me" src={profile} />
+        <Image alt="a portrait of me" src={profile} />
+        </Container>
       </main>
 
       <footer className={styles.footer}>
