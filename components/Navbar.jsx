@@ -12,6 +12,9 @@ import MenuItem from "@mui/material/MenuItem";
 import Slide from "@mui/material/Slide";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Image from 'next/image'
+import Icon from "@mui/material/Icon"
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const pages = ["About", "Portfolio", "Contact"];
 
@@ -54,6 +57,8 @@ const Navbar = (props) => {
               sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
             >
               <Image src="/R.svg" alt="Raffaele Cataldo Logo" width={140} height={32} />
+              <GitHubIcon color="secondary"></GitHubIcon>
+              <LinkedInIcon color="secondary"/>
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
