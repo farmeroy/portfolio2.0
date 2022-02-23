@@ -26,7 +26,8 @@ export default function Home() {
         <About />
         <Projects />
         <ContactForm />
-                <Container>
+        {'  '}
+                <Container sx={{margin:10}}>
         <Image alt="a portrait of me" src={profile} />
         <Image alt="a portrait of me" src={profile} />
         <Image alt="a portrait of me" src={profile} />
