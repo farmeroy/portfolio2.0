@@ -16,7 +16,7 @@ const Hero = () => {
             <Typography variant="h3" component="div" gutterBottom>
               Web Developer
             </Typography>
-            <h2 className={styles.code}>I love to build elegant solutions for front end (and back end) technologies</h2>
+            <h2 className={styles.code}>I build elegant solutions for front end (and back end) technologies</h2>
             <div>
             <Button variant="contained" color="secondary" disableElevation sx={{padding:2}}>
               Check Out my Portfolio
