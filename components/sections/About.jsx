@@ -4,7 +4,7 @@ import portrait from "../../public/portrait1bw.JPG";
 
 const About = () => {
   return (
-    <Container >
+    <Box sx={{padding:8}} >
       <Grid container spacing={8}>
         <Grid item xs={12}>
           <Typography variant="h2">About me</Typography>
@@ -47,7 +47,8 @@ const About = () => {
         Download Resume
       </Button>
       </Box>
-    </Container>
+    </Box>
+
   );
 };
 
