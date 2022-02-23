@@ -3,10 +3,10 @@ import { Card, Paper, CardContent, CardMedia, CardActionArea, CardActions, Butto
 
 const ProjectCard = (props) => {
  return (
-    <Card sx={{ maxWidth: 345 }} variant="outlined" raised>
+    <Card sx={{ maxWidth: 345, height:"100%" }} variant="outlined" raised>
       <CardMedia
         component="img"
-        height="140"
+        height="200"
         image={props.img}
         alt={props.alt}
       />
@@ -19,8 +19,8 @@ const ProjectCard = (props) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Read More</Button>
-        <Button size="small">See Live</Button>
+        <Button size="small" color="secondary" variant="outlined">Read More</Button>
+        <Button size="small" color="secondary" variant="outlined">See Live</Button>
       </CardActions>
     </Card>
   );
