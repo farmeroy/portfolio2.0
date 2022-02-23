@@ -8,6 +8,7 @@ const Hero = () => {
             <Typography
               variant="h2"
               component="div"
+              color="secondary"
               gutterBottom
               sx={{ fontFamily: "Noto Sans Mono" }}
             >
