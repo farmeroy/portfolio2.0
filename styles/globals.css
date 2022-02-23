@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
 
+
 html,
 body {
   padding: 0;
@@ -7,6 +8,11 @@ body {
   font-family: -apple-system, 'Noto Sans Mono', monospace;
   /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, */
   /*   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+}
+
+body {
+  background:linear-gradient(175deg,rgba(22, 24, 34, 1) 0%,rgba(22, 24, 34, 1) 30%,rgba(38, 41, 58, 1) 60%);
+
 }
 
 a {
