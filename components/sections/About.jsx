@@ -6,11 +6,10 @@ const About = () => {
   return (
     <Container sx={{ width: 700, padding: 5 }}>
       <Typography variant="h2">About me</Typography>
-            <Typography variant="p">
-<Box sx={{ width: 200 }}>
-        <Image alt="a portrait of me" src={portrait} />
-      </Box>
-
+        <Box sx={{ width: 200 }}>
+          <Image alt="a portrait of me" src={portrait} />
+        </Box>
+      <Typography variant="p">
         I've always enjoyed a challenge. As a professional musician, I played in
         a circus band and travelled from Istanbul to Singapore by bicycle. These
         days, my challenge is developing React apps using Vim in my terminal!
