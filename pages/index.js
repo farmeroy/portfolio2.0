@@ -6,6 +6,7 @@ import profile from "../public/raffe_profile.jpg";
 import Hero from '../components/sections/Hero'
 import About from '../components/sections/About'
 import Projects from '../components/sections/Projects'
+import ContactForm from '../components/sections/Contact'
 import {  Container } from '@mui/material'
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
         </div>
         <About />
         <Projects />
+        <ContactForm />
                 <Container>
         <Image alt="a portrait of me" src={profile} />
         <Image alt="a portrait of me" src={profile} />
