@@ -3,7 +3,7 @@ import { CacheProvider } from '@emotion/react';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 
 import createEmotionCache from '../utility/createEmotionCache';
-import lightTheme from '../styles/theme/lightTheme';
+import icebergTheme from '../styles/theme/icebergTheme'
 import '../styles/globals.css';
 
 const clientSideEmotionCache = createEmotionCache();
@@ -13,7 +13,7 @@ const MyApp = (props) => {
 
   return (
     <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={lightTheme}>
+      <ThemeProvider theme={icebergTheme}>
         <CssBaseline />
         <Component {...pageProps} />
       </ThemeProvider>
