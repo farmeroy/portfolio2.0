@@ -1,4 +1,4 @@
-import { Paper, Grid, Box, TextField, Typography } from "@mui/material";
+import { Paper, Grid, Box, TextField, Typography, Button } from "@mui/material";
 
 const ContactForm = () => {
   return (
@@ -14,24 +14,29 @@ const ContactForm = () => {
     <Grid item md={6} >
     <Box component="form" sx={{display:'flex', flexDirection:'column', width:500}}>
       <Paper>
+    <form name='contact' method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact" />
       <TextField
         required
         fullWidth
         id="filled-required"
         type="email"
         label="email address"
-        defaultValue="email@email.com"
         variant="filled"
       />
       <TextField
         required
+        multiline
+        rows={8}
         fullWidth
         id="your-message-required"
         label="your message"
         type="text"
-        defaultValue="Send me a message..."
         variant="filled"
       />
+      <Button type='submit' color="secondary" variant="text">Submit</Button>
+      
+    </form>
 </Paper>
     </Box>
 
