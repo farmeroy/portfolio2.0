@@ -2,12 +2,11 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar";
-import profile from "../public/raffe_profile.jpg";
-import Hero from '../components/sections/Hero'
-import About from '../components/sections/About'
-import Projects from '../components/sections/Projects'
-import ContactForm from '../components/sections/Contact'
-import {  Container } from '@mui/material'
+import Hero from "../components/sections/Hero";
+import About from "../components/sections/About";
+import Projects from "../components/sections/Projects";
+import ContactForm from "../components/sections/Contact";
+import { Container } from "@mui/material";
 
 export default function Home() {
   return (
@@ -26,13 +25,7 @@ export default function Home() {
         <About />
         <Projects />
         <ContactForm />
-        {'  '}
-                <Container sx={{margin:10}}>
-        <Image alt="a portrait of me" src={profile} />
-        <Image alt="a portrait of me" src={profile} />
-        <Image alt="a portrait of me" src={profile} />
-        <Image alt="a portrait of me" src={profile} />
-        </Container>
+        {"  "}
       </main>
 
       <footer className={styles.footer}>
