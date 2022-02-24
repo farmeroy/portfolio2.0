@@ -10,7 +10,6 @@ const Hero = () => {
               component="div"
               color="secondary"
               gutterBottom
-              sx={{ fontFamily: "Noto Sans Mono" }}
             >
               Raffaele Cataldo
             </Typography>
