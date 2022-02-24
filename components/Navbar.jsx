@@ -14,10 +14,13 @@ import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Image from 'next/image';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
 
+const xlinkedIn = <LinkedInIcon />;
+const xgitHub = <GitHubIcon/>;
+const xcontact = <EmailIcon />;
 
-
-const pages = ["About", "Portfolio", "GitHub", "LinkedIn" ,"Contact"];
+const pages = ["About", "Portfolio", "Resume", xgitHub, xlinkedIn , xcontact];
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -54,6 +57,7 @@ const Navbar = (props) => {
       
             <Typography
               variant="h6"
+              color="secondary"
               noWrap
               component="div"
               sx={{ mr: 2, display: { xs: "none", md: "flex" },  }}
@@ -62,21 +66,6 @@ const Navbar = (props) => {
 
               <Image src="/R.svg" alt="Raffaele Cataldo Logo" width={140} height={32} />
               </Button>              
-              {/* <IconButton */}
-              {/*   size="large" */}
-              {/*   aria-label="github" */}
-              {/*   color="inherit" */}
-              {/* > */}
-
-              {/* <GitHubIcon color="secondary"/></IconButton> */}
-
-              {/* <IconButton */}
-              {/*   size="large" */}
-              {/*   aria-label="github" */}
-              {/*   color="inherit" */}
-              {/* > */}
-              {/* <LinkedInIcon color="secondary"/> */}
-            {/* </IconButton> */}
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -110,13 +99,14 @@ const Navbar = (props) => {
               >
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                    <Typography color="secondary" textAlign="center">{page}</Typography>
                   </MenuItem>
                 ))}
               </Menu>
             </Box>
             <Typography
               variant="h6"
+              color="secondary"
               noWrap
               component="div"
               sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
