@@ -98,7 +98,7 @@ const Navbar = (props) => {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <MenuItem key={pages.indexOf(page)} onClick={handleCloseNavMenu}>
                     <Typography color="secondary" textAlign="center">{page}</Typography>
                   </MenuItem>
                 ))}
@@ -116,7 +116,7 @@ const Navbar = (props) => {
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex", justifyContent:'flex-end'},}}>
               {pages.map((page) => (
                 <Button
-                  key={page}
+                  key={pages.indexOf(page)}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
