@@ -33,7 +33,6 @@ const Projects = () => {
       {projectArr.map((project) => (
         <Grid item md={4} key={project.title}>
         <ProjectCard
-          key={project.title}
           title={project.title} 
           img={project.img}
           description={project.description}
