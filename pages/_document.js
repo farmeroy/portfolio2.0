@@ -12,6 +12,7 @@ export default class MyDocument extends Document {
         <Head>
           <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap" rel="stylesheet"/>
           <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Roboto+Mono&display=swap" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"/>
         </Head>
         <body>
           <Main />
