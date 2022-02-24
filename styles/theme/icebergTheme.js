@@ -17,16 +17,11 @@ const icebergTheme = createTheme({
       primary: '#c6c8d1',
             secondary: '#89b9c2',
     },
+
+  },
+
     typography: {
-      fontFamily: ['Noto Sans Mono', 'monospace', 'Roboto Mono'].join(','),
-  },
-  overrides: {
-    MuiCssBaseline: {
-      '@global': {
-        '@font-face': ['Noto Sans Mono'],
-      },
-    },
-  },
+      fontFamily: ['NotoSansMono, monospace', ].join(','),
   },
 });
 
