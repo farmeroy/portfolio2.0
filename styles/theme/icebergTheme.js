@@ -21,7 +21,20 @@ const icebergTheme = createTheme({
   },
 
     typography: {
-      fontFamily: ['NotoSansMono, monospace', ].join(','),
+      fontFamily: ['Noto Sans Mono, monospace', ].join(','),
+      button: {
+        fontFamily: undefined,
+        fontSize: 12
+      },
+      h2: {
+        fontFamily: 'Ubuntu Mono'
+      },
+      h1: {
+        fontFamily: 'Ubuntu Mono'
+      },
+      h3: {
+        fontFamily: 'Ubuntu Mono'
+      }
   },
 });
 
