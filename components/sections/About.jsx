@@ -14,7 +14,7 @@ const About = () => {
         {/*           <Image alt="a portrait of me" src={portrait} /> */}
         {/*         </Box> */}
         {/* </Grid> */}
-        <Grid item xs={2} />
+        <Grid item xs={1} />
         <Grid item md={8} xs={10}>
           <Typography variant="p">
             I've always enjoyed a challenge. As a professional musician, I
