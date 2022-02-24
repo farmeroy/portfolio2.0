@@ -28,7 +28,7 @@ const Projects = () => {
     <Box component='div' sx={{marginBottom:12}}>
     <Grid container spacing={2} alignItems="stretch">
       <Grid item xs={12}>
-      <Typography variant="h2" sx={{fontFamily:'Noto Sans Mono'}}>My Projects</Typography>  
+      <Typography variant="h2" >My Projects</Typography>  
       </Grid>
       {projectArr.map((project) => (
         <Grid item md={4} key={project.title}>
