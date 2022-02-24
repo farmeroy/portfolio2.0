@@ -11,10 +11,10 @@ const ProjectCard = (props) => {
         alt={props.alt}
       />
       <CardContent >
-        <Typography gutterBottom variant="h5" color="text.secondary" component="div" sx={{fontFamily:'Noto Sans Mono '}}>
+        <Typography gutterBottom variant="h5" color="text.secondary" component="div" >
           {props.title}
         </Typography>
-        <Typography variant="body2" color="text.primary" sx={{fontFamily:'Noto Sans Mono'}}>
+        <Typography variant="body2" color="text.primary" >
           {props.description}
         </Typography>
       </CardContent>
