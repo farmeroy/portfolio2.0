@@ -6,6 +6,7 @@ import Hero from "../components/sections/Hero";
 import About from "../components/sections/About";
 import Projects from "../components/sections/Projects";
 import ContactForm from "../components/sections/Contact";
+import {Grid} from '@mui/material';
 
 export default function Home() {
   return (
@@ -17,6 +18,9 @@ export default function Home() {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <Navbar />
+      <Grid container>
+      <Grid item sm={1} xl={2} />
+      <Grid item sm={10} xl={8}>
       <main className={styles.main}>
         <div className={styles.hero}>
           <Hero />
@@ -26,6 +30,9 @@ export default function Home() {
         <ContactForm />
         {"  "}
       </main>
+      </Grid >
+      <Grid item xs={1} lg={2} />
+      </Grid>
 
       <footer className={styles.footer}>
         <span className={styles.logo}>
