@@ -11,8 +11,8 @@ const ContactForm = () => {
     <Grid item md={6}>
       <Typography variant="p" >I'm currently looking to find a fulltime position. My goal is to find a job in Berlin or a remote position in the US (I'm willing to relocate)</Typography>
     </Grid> 
-    <Grid item md={6} >
-    <Box component="form" sx={{display:'flex', flexDirection:'column', width:500}}>
+    <Grid item xs={12} md={6} >
+    <Box component="form" sx={{display:'flex', flexDirection:'column' }}>
       <Paper>
     <form name='contact' method="POST" data-netlify="true">
       <input type="hidden" name="form-name" value="contact" />
