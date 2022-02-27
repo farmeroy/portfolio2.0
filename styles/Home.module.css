@@ -10,14 +10,14 @@
   }
 
 .main {
-  min-height: 100vh;
-  /* padding: 6rem ; */
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "Noto Sans Mono";
+  /* min-height: 100vh; */
+  /* /1* padding: 6rem ; *1/ */
+  /* flex: 1; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* font-family: "Noto Sans Mono"; */
 
 }
 
@@ -38,20 +38,20 @@
 }
 
 .code {
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  /* border-radius: 5px; */
+  /* padding: 0.75rem; */
+  /* font-size: 1.1rem; */
+  /* font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, */
+  /*   Bitstream Vera Sans Mono, Courier New, monospace; */
 }
 
 
 .hero {
-  text-align: center;
+  /* text-align: center; */
 }
 
 @media (max-width: 600px) {
   .main {
-    padding: .5rem;
+    /* padding: .5rem; */
   }
 }
