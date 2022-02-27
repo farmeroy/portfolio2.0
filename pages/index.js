@@ -10,7 +10,7 @@ import {Grid} from '@mui/material';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div >
       <Head>
         <title>Raffaele Cataldo - Developer</title>
         <meta name="description" content="built by Raffaele Cataldo" />
@@ -19,8 +19,8 @@ export default function Home() {
       </Head>
       <Navbar />
       <Grid container>
-      <Grid item sm={1} xl={2} />
-      <Grid item sm={10} xl={8}>
+      <Grid item xs={1} xl={2} />
+      <Grid item xs={10} xl={8}>
       <main className={styles.main}>
         <div className={styles.hero}>
           <Hero />
