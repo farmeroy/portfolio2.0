@@ -26,12 +26,12 @@ const projectArr = [
 const Projects = () => {
   return (
     <Box component='div' sx={{marginBottom:12}}>
-    <Grid container spacing={2} alignItems="stretch">
+    <Grid container spacing={2} rowSpacing={4} alignItems="stretch">
       <Grid item xs={12}>
       <Typography variant="h2" >My Projects</Typography>  
       </Grid>
       {projectArr.map((project) => (
-        <Grid item md={4} key={project.title}>
+        <Grid item xs={12} md={6} lg={4} xl={3} key={project.title}>
         <ProjectCard
           title={project.title} 
           img={project.img}
