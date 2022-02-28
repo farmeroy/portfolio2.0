@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { Button, Typography, Grid, Box } from '@mui/material'
+import { Button, Typography, Box } from '@mui/material'
 import styles from "../../styles/Home.module.css"
 
 const Hero = () => {
     return (
-      <Box component="div" sx={{minHeight: "100vh"}}>
+      <Box component="div" sx={{minHeight: "70vh"}}>
             <Typography
               variant="h2"
               component="div"
