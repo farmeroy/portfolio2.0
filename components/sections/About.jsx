@@ -4,12 +4,12 @@ import portrait from "../../public/portrait1bw.JPG";
 
 const About = () => {
   return (
-    <Box >
-      <Grid container spacing={4}>
+    <Box id="About" sx={{ marginBottom: 12 }}>
+      <Grid container spacing={4} alignItems='center'>
         <Grid item xs={12}>
           <Typography variant="h2">About me</Typography>
         </Grid>
-                 <Grid item md={8} xs={12}>
+        <Grid item md={8} xs={12}>
           <Typography variant="p">
             I've always enjoyed a challenge. As a professional musician, I
             played in a circus band and travelled from Istanbul to Singapore by
@@ -31,22 +31,29 @@ const About = () => {
             <br />
           </Typography>
         </Grid>
-<Grid item xs={8} md={4}> 
-                 <Box > 
-                   <Image alt="a portrait of me" src={portrait} />
-                 </Box> 
-         </Grid> 
-
+        <Grid item xs={6} md={4}>
+          <Box>
+            <Image alt="a portrait of me" src={portrait} />
+          </Box>
+        </Grid>
+        <Grid item md={4} />
+        {/* <Grid item xs={10} sm={2} md={3}> */}
+        {/*   <Button */}
+        {/*     color="secondary" */}
+        {/*     disableElevation */}
+        {/*     variant="contained" */}
+        {/*     sx={{ padding: 2 }} */}
+        {/*   > */}
+        {/*     Contact Me */}
+        {/*   </Button> */}
+        {/* </Grid> */}
+        <Grid item xs={10} sm={2} md={3}>
+          <Button color="secondary" variant="outlined" sx={{ padding: 2 }}>
+            Download Resume
+          </Button>
+        </Grid>
       </Grid>
-      <Box sx={{margin:4, textAlign:'center'}}> 
-      <Button color="secondary" disableElevation variant="contained" sx={{ padding: 2 }}>Contact Me</Button>
-      {'   '}
-      <Button color="secondary" variant="outlined" sx={{ padding: 2 }}>
-        Download Resume
-      </Button>
-      </Box>
     </Box>
-
   );
 };
 
