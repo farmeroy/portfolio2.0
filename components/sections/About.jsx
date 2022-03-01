@@ -1,8 +1,10 @@
-import { Container, Typography, Button, Box, Grid } from "@mui/material";
+import { Link, Typography, Button, Box, Grid } from "@mui/material";
 import Image from "next/image";
 import portrait from "../../public/portrait1bw.JPG";
 
 const About = () => {
+
+  
   return (
     <Box id="About" sx={{ marginBottom: 12 }}>
       <Grid container spacing={4} alignItems='center'>
@@ -49,7 +51,7 @@ const About = () => {
         {/* </Grid> */}
         <Grid item xs={10} sm={2} md={3}>
           <Button color="secondary" variant="outlined" sx={{ padding: 2 }}>
-            Download Resume
+            <Link underline="none" color='secondary' href="/RaffaeleCataldoCV.pdf" target="_blank">Download Resume</Link>
           </Button>
         </Grid>
       </Grid>
