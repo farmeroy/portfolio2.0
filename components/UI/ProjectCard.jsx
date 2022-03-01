@@ -1,4 +1,4 @@
-import { Card, Paper, CardContent, CardMedia, CardActionArea, CardActions, Button, Typography } from '@mui/material'
+import { Card, Link, CardContent, CardMedia, CardActionArea, CardActions, Button, Typography } from '@mui/material'
 
 
 const ProjectCard = (props) => {
@@ -21,8 +21,15 @@ const ProjectCard = (props) => {
       </CardContent>
 </CardActionArea>
       <CardActions sx={{justifySelf: 'flex-end'}} >
-        <Button size="small" color="secondary" variant="outlined">Read More</Button>
-        <Button size="small" color="secondary" variant="outlined">See Live</Button>
+        {props.caseStudy &&
+        <Button size="small" color="secondary" variant="outlined"><Link underline='none' href={props.caseStudy} target="_blank" size="small" color="secondary" variant="outlined">Read More</Link></Button> }
+        {props.liveUrl && 
+        <Button size="small" color="secondary" variant="outlined"><Link underline='none' href={props.liveUrl} target="_blank" size="small" color="secondary" variant="outlined">See Live</Link></Button> }
+      
+        {props.gitUrl &&
+        <Button size='small' color='secondary' variant='outlined'>
+        <Link underline='none' href={props.gitUrl} target="_blank" size="small" color="secondary" variant="outlined">See Code</Link>
+        </Button>}
       </CardActions>
     </Card>
   );
