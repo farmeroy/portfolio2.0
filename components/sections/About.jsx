@@ -13,7 +13,7 @@ const About = () => {
         </Grid>
         <Grid item md={8} xs={12}>
           <Typography variant="p">
-            I've always enjoyed a challenge. As a professional musician, I
+            I&apos;ve always enjoyed a challenge. As a professional musician, I
             played in a circus band and travelled from Istanbul to Singapore by
             bicycle. These days, my challenge is developing React apps using Vim
             in my terminal!
@@ -25,9 +25,9 @@ const About = () => {
             <br />
             With years working in small groups and dedicating myself to
             practice, I know how to work on a team and also how to maintain
-            discipline and focus in remote work. I've built landing pages for
-            colleagues' musical projects, built my own Rest APIs from scratch,
-            and developed single page applications with React. I'm looking to
+            discipline and focus in remote work. I&apos;ve built landing pages for
+            colleagues&apos; musical projects, built my own Rest APIs from scratch,
+            and developed single page applications with React. I&apos;m looking to
             take on more responsibility and looking forward to becoming part of
             a cutting-edge team.
             <br />
