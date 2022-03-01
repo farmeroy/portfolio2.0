@@ -10,8 +10,8 @@ const ContactForm = () => {
       </Grid>
       <Grid item md={6}>
         <Typography variant="p">
-          I'm currently looking to find a fulltime position. My goal is to find
-          a job in Berlin or a remote position in the US (I'm willing to
+          I&apos;m currently looking to find a fulltime position. My goal is to find
+          a job in Berlin or a remote position in the US (I&apos;m willing to
           relocate)
         </Typography>
       </Grid>
