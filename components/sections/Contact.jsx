@@ -2,7 +2,7 @@ import { Paper, Grid, Box, TextField, Typography, Button } from "@mui/material";
 
 const ContactForm = () => {
   return (
-    <Box sx={{minHeight: '90vh'}}>
+    <Box id="Contact" sx={{minHeight: '90vh'}}>
     <Grid container rowSpacing={4} columnSpacing={4}>
       <Grid item xs={1} />
       <Grid item xs={10}>
@@ -16,7 +16,7 @@ const ContactForm = () => {
         </Typography>
       </Grid>
       <Grid item xs={12} md={6}>
-        <Box component="form" sx={{ display: "flex", flexDirection: "column" }}>
+        <Box sx={{ display: "flex", flexDirection: "column" }}>
           <Paper>
             <form name="contact" method="POST" data-netlify="true">
               <input type="hidden" name="form-name" value="contact" />
@@ -25,6 +25,7 @@ const ContactForm = () => {
                 fullWidth
                 id="filled-required"
                 type="email"
+                name="email"
                 label="email address"
                 variant="filled"
               />
@@ -35,6 +36,7 @@ const ContactForm = () => {
                 fullWidth
                 id="your-message-required"
                 label="your message"
+                name="message"
                 type="text"
                 variant="filled"
               />
