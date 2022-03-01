@@ -5,7 +5,6 @@ export default function smoothScrollHandler(goal) {
   // topNavButton.className = "fa fa-bars";
   // const offsetY = document.getElementById("myTopnav").clientHeight;
   // removed '- offsetY' from scroll function
-  console.log(goal)
   scroll({
     top: goalEl.getBoundingClientRect().top + window.pageYOffset,
     behavior: "smooth",
