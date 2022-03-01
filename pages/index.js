@@ -6,11 +6,15 @@ import Hero from "../components/sections/Hero";
 import About from "../components/sections/About";
 import Projects from "../components/sections/Projects";
 import ContactForm from "../components/sections/Contact";
-import {Grid} from '@mui/material';
+import {Grid, Fab} from '@mui/material';
+import ScrollToTopBtn from '../components/UI/ScrollToTopBtn'
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
-export default function Home() {
+
+
+export default function Home(props) {
   return (
-    <div >
+    <div id="back-to-top-anchor">
       <Head>
         <title>Raffaele Cataldo - Developer</title>
         <meta name="description" content="built by Raffaele Cataldo" />
@@ -18,7 +22,7 @@ export default function Home() {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <Navbar />
-      <Grid container>
+      <Grid container >
       <Grid item xs={1} xl={2} />
       <Grid item xs={10} xl={8}>
       <main className={styles.main}>
@@ -32,6 +36,12 @@ export default function Home() {
       </main>
       </Grid >
       <Grid item xs={1} lg={2} />
+<ScrollToTopBtn {...props}>
+        <Fab color="secondary" size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollToTopBtn>
+
       </Grid>
 
       <footer className={styles.footer}>
@@ -44,6 +54,6 @@ export default function Home() {
           />
         </span>
       </footer>
-    </div>
+          </div>
   );
 }
