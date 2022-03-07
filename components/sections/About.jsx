@@ -50,8 +50,8 @@ const About = () => {
         {/*   </Button> */}
         {/* </Grid> */}
         <Grid item xs={10} sm={2} md={3}>
-          <Button color="secondary" variant="outlined" sx={{ padding: 2 }}>
-            <Link underline="none" color='secondary' href="/RaffaeleCataldoCV.pdf" target="_blank">Download Resume</Link>
+          <Button color="secondary" variant="contained" sx={{ padding: 2 }}>
+            <Link underline="none" href="/RaffaeleCataldoCV.pdf" target="_blank">Download Resume</Link>
           </Button>
         </Grid>
       </Grid>
