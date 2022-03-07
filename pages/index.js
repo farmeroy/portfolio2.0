@@ -22,7 +22,7 @@ export default function Home(props) {
         <link rel="icon" href="/R.svg" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <Navbar />
+      <Navbar home={true}/>
       <Grid container>
         <Grid item xs={1} xl={2} />
         <Grid item xs={10} xl={8}>
