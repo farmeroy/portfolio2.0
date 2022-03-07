@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from 'next/link';
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -88,12 +89,23 @@ const Navbar = (props) => {
     </MuiLink>
   );
 
+  const goHome = (
+    <MuiLink
+    underline="none"
+    href="/"
+    sx={{ my: 2, color: "white", display: "block" }}
+    >
+    Home
+  </MuiLink>
+    
+  )
+
   // We expect a prop called home 
   // if home = true than we render all the home sections in the navbar
   // else we render external links and a way to get home
   const pages = props.home
     ? ["About", "Portfolio", resume, xgitHub, xlinkedIn, xcontact]
-    : [resume, xgitHub, xlinkedIn, xcontact];
+    : [goHome, resume, xgitHub, xlinkedIn, xcontact];
 
   return (
     <HideOnScroll {...props}>
@@ -108,12 +120,14 @@ const Navbar = (props) => {
               sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
             >
               <Button color="secondary">
+                <Link href="/">
                 <Image
                   src="/R.svg"
                   alt="Raffaele Cataldo Logo"
                   width={140}
                   height={32}
                 />
+              </Link>
               </Button>
             </Typography>
 
