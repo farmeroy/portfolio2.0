@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../../styles/caseStudies.module.css";
 import Navbar from "../../components/Navbar";
+import Contact from "../../components/sections/Contact";
 import { Grid, Fab, Typography } from "@mui/material";
 import ScrollToTopBtn from "../../components/UI/ScrollToTopBtn";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
@@ -36,6 +37,7 @@ const CaseStudy = ({ caseStudyData }, props) => {
                   }}
                 />
               </Grid>
+              <Contact />
               <Grid item xs={10} md={4}></Grid>
             </main>
           </Grid>
