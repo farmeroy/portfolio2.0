@@ -64,7 +64,7 @@ const xcontact = <EmailIcon onClick={()=> handleScroll('Contact')}/>;
 const resume = <MuiLink underline="none" href="./RaffaeleCataldoCV.pdf" target="_blank" sx={{ my: 2, color: "white", display: "block" }}>Resume</MuiLink>
 
 
-const pages = ["About", "Portfolio", resume, xgitHub, xlinkedIn, xcontact];
+const pages = props.home ? ["About", "Portfolio", resume, xgitHub, xlinkedIn, xcontact] : [resume, xgitHub, xlinkedIn, xcontact];
 
 
   return (
