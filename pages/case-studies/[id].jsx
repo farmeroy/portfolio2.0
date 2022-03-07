@@ -1,33 +1,82 @@
-import { getAllCaseStudyIds, getCaseStudyData } from '../../lib/case-studies'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../../styles/caseStudies.module.css";
+import Navbar from "../../components/Navbar";
+import { Grid, Fab, Typography } from "@mui/material";
+import ScrollToTopBtn from "../../components/UI/ScrollToTopBtn";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
+import { getAllCaseStudyIds, getCaseStudyData } from "../../lib/case-studies";
 
-
-const CaseStudy = ({caseStudyData}) => {
+const CaseStudy = ({ caseStudyData }, props) => {
   return (
-    <main>
-      {caseStudyData.title}<br />
-      {caseStudyData.id}<br />
-    </main>
-  )
+    <>
+      <div id="back-to-top-anchor">
+        <Head>
+          <title>Raffaele Cataldo - Developer</title>
+          <meta
+            name="description"
+            content="case study"
+          />
+          <link rel="icon" href="/R.svg" />
+          <meta name="viewport" content="initial-scale=1, width=device-width" />
+        </Head>
+        <Navbar />
+        <Grid container>
+          <Grid item xs={1} xl={2} />
+          <Grid item xs={10} xl={8}>
+            <main className={styles.main}>
+              <br />
+              <Typography variant="h1">{caseStudyData.title}</Typography>  
+              <Grid item xs={12}>
+                <div
+                  className={styles.content}
+                  dangerouslySetInnerHTML={{
+                    __html: caseStudyData.contentHtml,
+                  }}
+                />
+              </Grid>
+              <Grid item xs={10} md={4}></Grid>
+            </main>
+          </Grid>
+          <Grid item xs={1} lg={2} />
+          <ScrollToTopBtn {...props}>
+            <Fab color="secondary" size="small" aria-label="scroll back to top">
+              <KeyboardArrowUpIcon />
+            </Fab>
+          </ScrollToTopBtn>
+        </Grid>
 
-}
+        <footer className={styles.footer}>
+          <span className={styles.logo}>
+            <Image
+              src="/R.svg"
+              alt="Raffaele Cataldo Logo"
+              width={140}
+              height={32}
+            />
+          </span>
+        </footer>
+      </div>
+    </>
+  );
+};
 
 export async function getStaticPaths() {
   const paths = getAllCaseStudyIds();
   return {
     paths,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
 export async function getStaticProps({ params }) {
-  const caseStudyData = getCaseStudyData(params.id)
+  const caseStudyData = await getCaseStudyData(params.id);
   return {
     props: {
-      caseStudyData
-    }
-  }
-
+      caseStudyData,
+    },
+  };
 }
 
-export default CaseStudy
+export default CaseStudy;
