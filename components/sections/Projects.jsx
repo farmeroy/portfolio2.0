@@ -70,6 +70,7 @@ const Projects = () => {
           description={project.description}
           gitUrl={project.gitUrl}
           liveUrl={project.liveUrl}
+          caseStudy={project.caseStudy}
           />
 </Grid>
       ))}  
