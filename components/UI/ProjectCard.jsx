@@ -2,7 +2,6 @@ import { Card, Link, CardContent, CardMedia, CardActionArea, CardActions, Button
 
 
 const ProjectCard = (props) => {
-  console.log(props)
  return (
     <Card sx={{  height:"100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }} variant="outlined" >
       <CardActionArea>
@@ -23,7 +22,7 @@ const ProjectCard = (props) => {
 </CardActionArea>
       <CardActions sx={{justifySelf: 'flex-end'}} >
         {props.caseStudy &&
-        <Button size="small" color="secondary" variant="outlined"><Link underline='none' href={`/case-studies/${props.caseStudy}`} target="_blank" size="small" color="secondary" variant="outlined">Read More</Link></Button> }
+        <Button size="small" color="secondary" variant="outlined"><Link underline='none' href={`/case-studies/${props.caseStudy}`} size="small" color="secondary" variant="outlined">Read More</Link></Button> }
         {props.liveUrl && 
         <Button size="small" color="secondary" variant="outlined"><Link underline='none' href={props.liveUrl} target="_blank" size="small" color="secondary" variant="outlined">See Live</Link></Button> }
       
