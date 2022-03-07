@@ -5,6 +5,7 @@ const ProjectCard = (props) => {
  return (
     <Card sx={{  height:"100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }} variant="outlined" >
       <CardActionArea>
+        <Link underline='none' href={props.liveUrl ? props.liveUrl : props.gitUrl} target="_blank">
       <CardMedia
         component="img"
         height="200"
@@ -19,6 +20,7 @@ const ProjectCard = (props) => {
           {props.description}
         </Typography>
       </CardContent>
+      </Link>
 </CardActionArea>
       <CardActions sx={{justifySelf: 'flex-end'}} >
         {props.caseStudy &&
