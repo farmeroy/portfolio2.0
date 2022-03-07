@@ -18,6 +18,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import { Link as MuiLink } from "@mui/material";
 import smoothScrollHandler from "../utility/scroll-handler";
+import GoHomeIconBtn from './UI/GoHomeIconBtn';
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -112,24 +113,25 @@ const Navbar = (props) => {
       <AppBar>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Typography
-              variant="h6"
-              color="secondary"
-              noWrap
-              component="div"
-              sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
-            >
-              <Button color="secondary">
-                <Link href="/">
-                <Image
-                  src="/R.svg"
-                  alt="Raffaele Cataldo Logo"
-                  width={140}
-                  height={32}
-                />
-              </Link>
-              </Button>
-            </Typography>
+            <GoHomeIconBtn />
+            {/* <Typography */}
+            {/*   variant="h6" */}
+            {/*   color="secondary" */}
+            {/*   noWrap */}
+            {/*   component="div" */}
+            {/*   sx={{ mr: 2, display: { xs: "none", md: "flex" } }} */}
+            {/* > */}
+            {/*   <Button color="secondary"> */}
+            {/*     <Link href="/" passHref> */}
+            {/*     <Image */}
+            {/*       src="/R.svg" */}
+            {/*       alt="Raffaele Cataldo Logo" */}
+            {/*       width={140} */}
+            {/*       height={32} */}
+            {/*     /> */}
+            {/*   </Link> */}
+            {/*   </Button> */}
+            {/* </Typography> */}
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton

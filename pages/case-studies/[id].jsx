@@ -6,6 +6,7 @@ import Contact from "../../components/sections/Contact";
 import { Grid, Fab, Typography } from "@mui/material";
 import ScrollToTopBtn from "../../components/UI/ScrollToTopBtn";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import GoHomeIconBtn from '../../components/UI/GoHomeIconBtn';
 
 import { getAllCaseStudyIds, getCaseStudyData } from "../../lib/case-studies";
 
@@ -51,12 +52,7 @@ const CaseStudy = ({ caseStudyData }, props) => {
 
         <footer className={styles.footer}>
           <span className={styles.logo}>
-            <Image
-              src="/R.svg"
-              alt="Raffaele Cataldo Logo"
-              width={140}
-              height={32}
-            />
+            <GoHomeIconBtn />
           </span>
         </footer>
       </div>

@@ -16,7 +16,7 @@ const projectArr = [
     title: 'Pre-Code-Flix',
   img: '/movie-app.png',
     alt: 'A screenshot of the app',
-  description: "This is a 'IMDB style' movie app. .The front end is built with React, React-Router and React-Bootstrap.The back-end is built with Node, Passport, and MongoDB, Login with username: 'testUser', password: 'password' ",
+  description: "This is a full-stack 'IMDB style' movie app. .The front end is built with React, React-Router and React-Bootstrap.The back-end is built with Node, Passport, and MongoDB, Login with username: 'testUser', password: 'password' ",
   gitUrl: 'https://github.com/farmeroy/Movie-App-Client',
   liveUrl: "https://pre-code-flix.netlify.app",
   caseStudy: ''
