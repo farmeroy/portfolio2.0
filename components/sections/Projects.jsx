@@ -9,7 +9,8 @@ const projectArr = [
     alt: 'An image of meet app',
     description: 'A fullstack, progressive web app built with React and AWS Lambda. Users can access events via Google Calender API to search for web developer workshops across the globe, and also view data related to their search.Users sign in with GoogleAuth0',
     gitUrl: 'https://github.com/farmeroy/meet-app',
-    liveUrl: 'https://farmeroy.github.io/meet-app'
+    liveUrl: 'https://farmeroy.github.io/meet-app',
+    caseStudy: 'meet-app'
   },
 {
     title: 'Pre-Code-Flix',
