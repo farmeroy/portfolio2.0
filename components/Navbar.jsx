@@ -15,9 +15,8 @@ import Image from "next/image";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
-import { Link as MuiLink } from '@mui/material';
-import smoothScrollHandler from '../utility/scroll-handler';
-
+import { Link as MuiLink } from "@mui/material";
+import smoothScrollHandler from "../utility/scroll-handler";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -35,7 +34,6 @@ function HideOnScroll(props) {
   );
 }
 
-
 const Navbar = (props) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -49,23 +47,53 @@ const Navbar = (props) => {
 
   const handleScroll = (goal) => {
     setAnchorElNav(null);
-    if (typeof goal === 'string' ) {
+    if (typeof goal === "string") {
       smoothScrollHandler(goal);
     }
-  }
+  };
 
-// Named x... because it seemed the menu was layed out alphabetically?
-const xlinkedIn = <a href="https://www.linkedin.com/in/raffaele-cataldo-dev/" rel="noreferrer" target="_blank" color="secondary"><LinkedInIcon /></a>;
+  // Named x... because it seemed the menu was layed out alphabetically?
+  const xlinkedIn = (
+    <a
+      href="https://www.linkedin.com/in/raffaele-cataldo-dev/"
+      rel="noreferrer"
+      target="_blank"
+      color="secondary"
+    >
+      <LinkedInIcon />
+    </a>
+  );
 
-const xgitHub = <a href="https://github.com/farmeroy" rel="noreferrer" target="_blank" color="secondary"><GitHubIcon /></a>;
+  const xgitHub = (
+    <a
+      href="https://github.com/farmeroy"
+      rel="noreferrer"
+      target="_blank"
+      color="secondary"
+    >
+      <GitHubIcon />
+    </a>
+  );
 
-const xcontact = <EmailIcon onClick={()=> handleScroll('Contact')}/>;
+  const xcontact = <EmailIcon onClick={() => handleScroll("Contact")} />;
 
-const resume = <MuiLink underline="none" href="./RaffaeleCataldoCV.pdf" target="_blank" sx={{ my: 2, color: "white", display: "block" }}>Resume</MuiLink>
+  const resume = (
+    <MuiLink
+      underline="none"
+      href="./RaffaeleCataldoCV.pdf"
+      target="_blank"
+      sx={{ my: 2, color: "white", display: "block" }}
+    >
+      Resume
+    </MuiLink>
+  );
 
-
-const pages = props.home ? ["About", "Portfolio", resume, xgitHub, xlinkedIn, xcontact] : [resume, xgitHub, xlinkedIn, xcontact];
-
+  // We expect a prop called home 
+  // if home = true than we render all the home sections in the navbar
+  // else we render external links and a way to get home
+  const pages = props.home
+    ? ["About", "Portfolio", resume, xgitHub, xlinkedIn, xcontact]
+    : [resume, xgitHub, xlinkedIn, xcontact];
 
   return (
     <HideOnScroll {...props}>
