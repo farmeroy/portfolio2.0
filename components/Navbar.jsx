@@ -113,25 +113,15 @@ const Navbar = (props) => {
       <AppBar>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <GoHomeIconBtn />
-            {/* <Typography */}
-            {/*   variant="h6" */}
-            {/*   color="secondary" */}
-            {/*   noWrap */}
-            {/*   component="div" */}
-            {/*   sx={{ mr: 2, display: { xs: "none", md: "flex" } }} */}
-            {/* > */}
-            {/*   <Button color="secondary"> */}
-            {/*     <Link href="/" passHref> */}
-            {/*     <Image */}
-            {/*       src="/R.svg" */}
-            {/*       alt="Raffaele Cataldo Logo" */}
-            {/*       width={140} */}
-            {/*       height={32} */}
-            {/*     /> */}
-            {/*   </Link> */}
-            {/*   </Button> */}
-            {/* </Typography> */}
+            <Typography
+              variant="h6"
+              color="secondary"
+              noWrap
+              component="div"
+              sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
+            >
+              <GoHomeIconBtn />
+            </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
@@ -181,12 +171,7 @@ const Navbar = (props) => {
               component="div"
               sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
             >
-              <Image
-                src="/R.svg"
-                alt="Raffaele Cataldo Logo"
-                width={140}
-                height={32}
-              />
+              <GoHomeIconBtn />
             </Typography>
             <Box
               sx={{
