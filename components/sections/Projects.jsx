@@ -19,7 +19,7 @@ const projectArr = [
   description: "This is a full-stack 'IMDB style' movie app. .The front end is built with React, React-Router and React-Bootstrap.The back-end is built with Node, Passport, and MongoDB, Login with username: 'testUser', password: 'password' ",
   gitUrl: 'https://github.com/farmeroy/Movie-App-Client',
   liveUrl: "https://pre-code-flix.netlify.app",
-  caseStudy: ''
+  caseStudy: 'pre-code-flix'
 },{
     title: 'Mancala',
       img: '/mancala.png',
