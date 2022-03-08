@@ -25,8 +25,8 @@ const CaseStudy = ({ caseStudyData }, props) => {
         </Head>
         <Navbar />
         <Grid container>
-          <Grid item xs={1} xl={2} />
-          <Grid item xs={10} xl={8}>
+          <Grid item xs={1} lg={2} />
+          <Grid item xs={10} lg={8}>
             <main className={styles.main}>
               <br />
               <Typography variant="h1">{caseStudyData.title}</Typography>  
