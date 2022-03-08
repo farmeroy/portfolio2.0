@@ -30,7 +30,7 @@ const CaseStudy = ({ caseStudyData }, props) => {
             <main className={styles.main}>
               <br />
               <Typography variant="h1">{caseStudyData.title}</Typography>  
-              <Grid item xs={12}>
+              <Grid item xs={12} >
                 <div
                   className={styles.content}
                   dangerouslySetInnerHTML={{
@@ -38,6 +38,7 @@ const CaseStudy = ({ caseStudyData }, props) => {
                   }}
                 />
               </Grid>
+              <br />
               <Contact />
               <Grid item xs={10} md={4}></Grid>
             </main>
@@ -49,7 +50,6 @@ const CaseStudy = ({ caseStudyData }, props) => {
             </Fab>
           </ScrollToTopBtn>
         </Grid>
-
         <footer className={styles.footer}>
           <span className={styles.logo}>
             <GoHomeIconBtn />

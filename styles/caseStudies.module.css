@@ -4,14 +4,15 @@
   margin: auto;
 }
 
-/* .content { */
-/*   display: flex; */
-/*   flex-wrap: wrap; */
-/* } */
+.content {
+  margin-bottom: 4rem;
+}
 
 .main {
   margin-top: 4rem;
 }
+
+
 
 .footer {
   display: flex;
