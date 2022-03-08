@@ -14,7 +14,7 @@ title: 'Meet App'
 
 This app was part of my full-stack certification at Career Foundry. The objectives of the app were to develop a PWA using a Test Driven Development approach, as well as learn the basics of AWS Lambda and Google OAuth. 
 
-## Tools and Methodolgies
+## Tools and Methodologies
 - Create React App
 - AWS Lambda
 - Google Calendar API
