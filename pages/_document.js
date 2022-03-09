@@ -10,6 +10,11 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <meta name="twitter:card" content="summary" />
+          <meta property="og:title" content="Thumbnail example" />
+          <meta property="og:description" content="Raffaele Cataldo - Web Developer" />
+          <meta property="og:image" content="/siteImage.png" />
+          <meta property="og:url" content="https://raffaelecataldo.com"/>
           <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap" rel="stylesheet"/>
           <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Roboto+Mono&display=swap" rel="stylesheet"/>
           <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"/>
