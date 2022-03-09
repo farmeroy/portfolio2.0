@@ -10,8 +10,8 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta name="twitter:card" content="summary" />
-          <meta property="og:title" content="Thumbnail example" />
+          <meta name="twitter:card" content="Raffaele Cataldo's Portfolio" />
+          <meta property="og:title" content="Raffaele Cataldo" />
           <meta property="og:description" content="Raffaele Cataldo - Web Developer" />
           <meta property="og:image" content="/siteImage.png" />
           <meta property="og:url" content="https://raffaelecataldo.com"/>
