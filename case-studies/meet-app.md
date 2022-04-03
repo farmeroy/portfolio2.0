@@ -8,7 +8,7 @@ title: 'Meet App'
 
 “Meet-App” is a progressive web app that allows users to search for upcoming web-development workshops in their city, as well as view data related to what kind of events occur in which places. The events are loaded from Google Calendar API and the user also signs in with Google. The app features a serverless backend (AWS Lambda).
 
-> ![meet app screenshot](/meet-app.png)
+> ![meet app screenshot](/meet-app.gif)
 
 ## Purpose/Context
 
