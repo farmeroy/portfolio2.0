@@ -47,6 +47,14 @@ export default function Home(props) {
       <footer className={styles.footer}>
         <span className={styles.logo}>
           <GoHomeIconBtn />
+          <div>
+            <p className={styles.imprint}>
+              Imprint<br/>
+              Raffaele Cataldo<br/>
+              Schonleinstr. 7a<br/>
+              Berlin 10967<br/>
+            raffaelecataldo.dev@gmail.com</p>
+          </div>
         </span>
       </footer>
     </div>

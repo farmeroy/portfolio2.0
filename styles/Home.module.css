@@ -50,6 +50,11 @@
   /* text-align: center; */
 }
 
+.imprint {
+  text-align: center;
+  font-size: .8rem;
+}
+
 @media (max-width: 600px) {
   .main {
     /* padding: .5rem; */
