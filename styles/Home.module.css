@@ -23,6 +23,7 @@
 
 .footer {
   display: flex;
+  flex-direction: column;
   flex: 1;
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
@@ -52,7 +53,7 @@
 
 .imprint {
   text-align: center;
-  font-size: .8rem;
+  font-size: .5rem;
 }
 
 @media (max-width: 600px) {

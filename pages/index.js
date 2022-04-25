@@ -8,7 +8,7 @@ import ContactForm from "../components/sections/Contact";
 import { Grid, Fab } from "@mui/material";
 import ScrollToTopBtn from "../components/UI/ScrollToTopBtn";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import GoHomeIconBtn from '../components/UI/GoHomeIconBtn';
+import GoHomeIconBtn from "../components/UI/GoHomeIconBtn";
 
 export default function Home(props) {
   return (
@@ -22,7 +22,7 @@ export default function Home(props) {
         <link rel="icon" href="/R.svg" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <Navbar home={true}/>
+      <Navbar home={true} />
       <Grid container>
         <Grid item xs={1} xl={2} />
         <Grid item xs={10} xl={8}>
@@ -47,15 +47,20 @@ export default function Home(props) {
       <footer className={styles.footer}>
         <span className={styles.logo}>
           <GoHomeIconBtn />
-          <div>
-            <p className={styles.imprint}>
-              Imprint<br/>
-              Raffaele Cataldo<br/>
-              Schonleinstr. 7a<br/>
-              Berlin 10967<br/>
-            raffaelecataldo.dev@gmail.com</p>
-          </div>
         </span>
+        <div>
+          <p className={styles.imprint}>
+            Imprint
+            <br />
+            Raffaele Cataldo
+            <br />
+            Schonleinstr. 7a
+            <br />
+            Berlin 10967
+            <br />
+            raffaelecataldo.dev@gmail.com
+          </p>
+        </div>
       </footer>
     </div>
   );
