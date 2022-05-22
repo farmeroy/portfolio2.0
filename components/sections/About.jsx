@@ -3,11 +3,9 @@ import Image from "next/image";
 import portrait from "../../public/portrait1bw.JPG";
 
 const About = () => {
-
-  
   return (
     <Box id="About" sx={{ marginBottom: 12 }}>
-      <Grid container spacing={4} alignItems='center'>
+      <Grid container spacing={4} alignItems="center">
         <Grid item xs={12}>
           <Typography variant="h2">About me</Typography>
         </Grid>
@@ -18,19 +16,27 @@ const About = () => {
             bicycle. These days, my challenge is developing React apps using Vim
             in my terminal!
             <br />
-            As a former jazz musician who discovered a passion for coding, I
-            enjoy delving into complex topics like music theory and JavaScript.
-            My current goal is to find a Web Developer position remote or in
-            Berlin, my adopted hometown.
             <br />
             With years working in small groups and dedicating myself to
             practice, I know how to work on a team and also how to maintain
-            discipline and focus in remote work. I&apos;ve built landing pages for
-            colleagues&apos; musical projects, built my own Rest APIs from scratch,
-            and developed single page applications with React. I&apos;m looking to
-            take on more responsibility and looking forward to becoming part of
-            a cutting-edge team.
+            discipline and focus in remote work. I&apos;ve built landing pages
+            for colleagues&apos; musical projects, built my own Rest APIs from
+            scratch, and developed single page applications with React. I&apos;m
+            currently developing UI for{" "}
+            <Link
+              href="https://www.withencore.com/"
+              target="_blank"
+              rel="noreferrer"
+              color="secondary"
+            >
+              Encore
+            </Link>
+            , a company helping creators manage their finances.
             <br />
+            <br />I love learning new things and having new experiences. If you
+            want to chat about your .vimrc, music theory, or anything related to
+            software and web development, send me a message or contact me on
+            LinkedIn.
           </Typography>
         </Grid>
         <Grid item xs={6} md={4}>
@@ -51,7 +57,13 @@ const About = () => {
         {/* </Grid> */}
         <Grid item xs={10} sm={2} md={3}>
           <Button color="secondary" variant="contained" sx={{ padding: 2 }}>
-            <Link underline="none" href="/RaffaeleCataldoCV.pdf" target="_blank">Download Resume</Link>
+            <Link
+              underline="none"
+              href="/RaffaeleCataldoCV.pdf"
+              target="_blank"
+            >
+              Download Resume
+            </Link>
           </Button>
         </Grid>
       </Grid>
