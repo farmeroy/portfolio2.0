@@ -50,13 +50,7 @@ export default function Home(props) {
         </span>
         <div>
           <p className={styles.imprint}>
-            Imprint
-            <br />
-            Raffaele Cataldo
-            <br />
-            Schonleinstr. 7a
-            <br />
-            Berlin 10967
+            © 2022 Raffaele Cataldo
             <br />
             raffaelecataldo.dev@gmail.com
           </p>
