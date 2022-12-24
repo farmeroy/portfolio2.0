@@ -4,13 +4,14 @@ import { Button } from "@mui/material";
 
 const GoHomeIconBtn = () => {
   return (
-    <Button color="secondary">
+    <Button color="secondary" edge="start">
       <Link href="/" passHref>
         <Image
+          color="primary"
           src="/R.svg"
           alt="Raffaele Cataldo Logo"
-          width={140}
-          height={32}
+          width={64}
+          height={64}
         />
       </Link>
     </Button>
