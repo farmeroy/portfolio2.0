@@ -4,9 +4,9 @@ import { Button } from "@mui/material";
 
 const GoHomeIconBtn = () => {
   return (
-    <Button color="secondary">
+    <Button color="secondary" sx={{ padding: "1rem" }}>
       <Link href="/" passHref>
-        <Image height={48} width={48} src="/R.svg" alt="go home button" />
+        <Image height={58} width={58} src="/R.svg" alt="go home button" />
       </Link>
     </Button>
   );
