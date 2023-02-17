@@ -1,6 +1,5 @@
 import { Link, Typography, Button, Box, Grid } from "@mui/material";
 import Image from "next/image";
-import portrait from "../../public/portrait1bw.JPG";
 
 const About = () => {
   return (
@@ -41,7 +40,12 @@ const About = () => {
         </Grid>
         <Grid item xs={6} md={4}>
           <Box>
-            <Image alt="a portrait of me" src={portrait} />
+            <Image
+              alt="a portrait of me"
+              width={400}
+              height={404}
+              src="/static/media/portrait1bw.JPG"
+            />
           </Box>
         </Grid>
         <Grid item md={4} />
