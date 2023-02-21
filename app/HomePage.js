@@ -1,5 +1,3 @@
-"use client";
-
 import Hero from "../components/sections/Hero";
 import About from "../components/sections/About";
 import Projects from "../components/sections/Projects";
@@ -7,8 +5,9 @@ import ContactForm from "../components/sections/Contact";
 import { Grid, Fab } from "@mui/material";
 import ScrollToTopBtn from "../components/UI/ScrollToTopBtn";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import styles from "../styles/Home.module.css";
 
-const HomePage = ({}) => {
+const HomePage = ({ props }) => {
   return (
     <Grid container>
       <Grid item xs={1} xl={2} />

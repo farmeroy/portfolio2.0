@@ -1,3 +1,4 @@
+"use client";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar";
 import GoHomeIconBtn from "../components/UI/GoHomeIconBtn";
