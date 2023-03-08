@@ -32,7 +32,7 @@ const projectArr = [
     liveUrl: "https://farmeroy.github.io/mancala/",
   },
   {
-    title: "Music Group Landing Page",
+    title: "Goodnight Circus Landing Page",
     img: "/goodnight.png",
     alt: "a band playing music",
     description:
