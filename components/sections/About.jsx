@@ -6,7 +6,7 @@ const About = () => {
     <Box id="About" sx={{ marginBottom: 12 }}>
       <Grid container spacing={4} alignItems="center">
         <Grid item xs={12}>
-          <Typography variant="h2">About me</Typography>
+          <Typography variant="h2">About Me</Typography>
         </Grid>
         <Grid item md={8} xs={12}>
           <Typography variant="p">

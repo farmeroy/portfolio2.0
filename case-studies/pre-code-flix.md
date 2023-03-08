@@ -4,7 +4,7 @@ title: 'Pre-Code Flix'
 
 ## Overview
 
-**Pre Code Flix** is a fullstack web app that allows users to create an account, log in, and browse a database of early Hollywood films. Users can like and unlike films, as well as read more about the genres and directors, and find other movies that might match their interests. 
+**Pre Code Flix** is a full-stack web app that allows users to create an account, log in, and browse a database of early Hollywood films. Users can like and unlike films, as well as read more about the genres and directors, and find other movies that might match their interests. 
 
 The frontend is built with React, and the back end is an Express.js REST API that accesses a non-relational database (MongoDB).
 
