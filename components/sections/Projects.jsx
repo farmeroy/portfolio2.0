@@ -3,6 +3,16 @@ import ProjectCard from "../../components/UI/ProjectCard";
 
 const projectArr = [
   {
+    title: "Synth App",
+    img: "/synth-app-1.png",
+    alt: "A screen shot of synth app sequener",
+    description:
+      "A Synthesizer/Sequencer application built with React/TypeScript, Next.js, Tone.js, using Recoil for state management. The user can create a pallet of notes and play music! This is the beggining of a larger, full-stack project",
+    gitUrl: "https://github.com/farmeroy/synth-app",
+    liveUrl: "https://synth-app.vercel.app/",
+    caseStudy: "synth-app",
+  },
+  {
     title: "Meet App",
     img: "/meet-app.png",
     alt: "An image of meet app",
