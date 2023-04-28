@@ -39,26 +39,16 @@ const About = () => {
           </Typography>
         </Grid>
         <Grid item xs={6} md={4}>
-          <Box>
+          <Box sx={{ position: "relative", "object-fit": "contain" }}>
             <Image
               alt="a portrait of me"
-              width={400}
-              height={404}
+              width={360}
+              height={360}
               src="/static/media/portrait1bw.JPG"
             />
           </Box>
         </Grid>
         <Grid item md={4} />
-        {/* <Grid item xs={10} sm={2} md={3}> */}
-        {/*   <Button */}
-        {/*     color="secondary" */}
-        {/*     disableElevation */}
-        {/*     variant="contained" */}
-        {/*     sx={{ padding: 2 }} */}
-        {/*   > */}
-        {/*     Contact Me */}
-        {/*   </Button> */}
-        {/* </Grid> */}
         <Grid item xs={10} sm={2} md={3}>
           <Button color="secondary" variant="contained" sx={{ padding: 2 }}>
             <Link
