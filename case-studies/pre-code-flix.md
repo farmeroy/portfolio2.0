@@ -6,20 +6,20 @@ title: 'Pre-Code Flix'
 
 **Pre Code Flix** is a full-stack web app that allows users to create an account, log in, and browse a database of early Hollywood films. Users can like and unlike films, as well as read more about the genres and directors, and find other movies that might match their interests. 
 
-The frontend is built with React, and the back end is an Express.js REST API that accesses a non-relational database (MongoDB).
+The front end is built with React, and the back end is an Express.js REST API that accesses a non-relational database (MongoDB).
 
 ![pre-code flix screenshot](/movie-app.png)
 
 ## Purpose/Context
 
 This app was part of my full-stack certification at Career Foundry. The objectives were to build a REST API, a non-relational database, and a front end with React. 
-I chose to focus the app on a period of cinema known as Pre-Code. Before 1934, Hollywood cinema had no rating system and many movies were produced that religious and politcal leaders found qustionable, but that lead to many great movies being produced. In 1934 the 'Hayes Code' was established and the Hollywood studios began to self-censor. I thought it would be interesting to focus on this early, often forgotten period. 
+I chose to focus the app on a period of cinema known as Pre-Code. Before 1934, Hollywood cinema had no rating system and many movies were produced that religious and political leaders found questionable, but that lead to many great movies being produced. In 1934 the 'Hayes Code' was established and the Hollywood studios began to self-censor. I thought it would be interesting to focus on this early, often forgotten period. 
 
 ## Tools and Methodologies
 
 ### Front End
 - React
-- Parcel
+- Parcel -> then updated to Vite
 - React-Router (v6)
 - React Bootstrap
 - Redux
@@ -52,14 +52,46 @@ Following this, I began with a mock data set to render the main view of the movi
 I added React Router to allow different views, and had to incorporate forms for the sign in and user update views.
 To give user feedback, I added a custom hook to ensure all form fields were filled. 
 Developing the Redux store to ensure state was organized app-wide was one of the pleasures of this process.
-Finally, using React-Bootstrap to allow conistent styling was a key part of the frontend responsiblities. 
+Finally, using React-Bootstrap to allow consistent styling was a key part of the front-end responsibilities. 
 
 
 ## Final Touches
-There is still work to be done on this app. I would like to add a youtube player, as many of these films are in the public domain and viewable on youtube. There are other button styling other other design points that I continue to work on.
+There is still work to be done on this app. I would like to add a YouTube player, as many of these films are in the public domain and viewable on YouTube. There are other button styling other other design points that I continue to work on.
 
 # Challenges
-## Package Versions 
+
+## Maintaining the App and Problems with Parcel
+### Replacing Parcel with Vite
+A year after completing this project for my Bootcamp,
+I decided I would like to do some updates and maintenance.
+My first goal was to simply clean up some of the styles,
+however, I noticed that the app would no longer hot reload after CSS changes.
+After some research, I came to the conclusion that Parcel [no longer hot reloads CSS](https://github.com/parcel-bundler/parcel/issues/7098). I began by ensuring I had the most up to date Parcel version and other dependencies, 
+but still no luck. 
+I decided I would experiment with replacing Parcel with Vite.
+The migration was straightforward, 
+after installing both `vite` and `@vitejs/plugin-react`, I had to update
+my scripts for running the program, as well as include a config file for vite. Then, a small
+refactor putting the `index.html` file in the root of the folder and it was good to go!
+However after pushing to GitHub, my Netlify app stopped working... Of Course! I had to update
+the build command on Netlify to `vite build`. 
+
+### Heroku no longer free
+Another maintenance issue was Heroku removing their free tier. I decided to use fly.io 
+as they have a generous free tier, continuous deployment, and a good CLI. 
+Some issues that I faced here was setting up a Docker file for the first time,
+but otherwise I was happy with the change.
+
+### Adding guest user login
+I also wanted to add a simple way to login without creating an account. 
+Of course, I already had instructions on github to logging with the username `testUser` and password `password`,
+but wouldn't it be great to just click a button? 
+One issue, however, would be - what if the testUser accounts are updated by the logged-in testUser?
+So in addition to adding a guest login button, I also returned to the back-end code and added checks
+on the `update` and `delete` user endpoints that prevent any changes to `testUser` details as well as prevent its deletion.
+
+
+## React Router Version
 When I began this project, the project brief included directions for using Parcel and React Router, but these instructions both referred to older versions of these packages that had been deprecate and were no longer supported.
 I had to make the decision whether I should follow along with the instructions that used unsupported package versions, or to use the current versions but with no support from the course materials. 
 I decided that for the longevity and maintenance of my project, I would prefer to use the current versions.
