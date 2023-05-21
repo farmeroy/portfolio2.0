@@ -13,16 +13,6 @@ const projectArr = [
     caseStudy: "synth-app",
   },
   {
-    title: "Meet App",
-    img: "/meet-app.png",
-    alt: "An image of meet app",
-    description:
-      "A full-stack, progressive web app built with React and AWS Lambda. Users can access events via Google Calender API to search for web developer workshops across the globe, and also view data related to their search.Users sign in with GoogleAuth0",
-    gitUrl: "https://github.com/farmeroy/meet-app",
-    liveUrl: "https://farmeroy.github.io/meet-app",
-    caseStudy: "meet-app",
-  },
-  {
     title: "Pre-Code-Flix",
     img: "/movie-app.png",
     alt: "A screenshot of the app",
@@ -40,6 +30,16 @@ const projectArr = [
       "This project is a two player strategy game made with React.  The game's logic takes advantage of the useContext hook. Aside from styling the board, writing the gameplay algorithm was the focus of this app, and an enjoyable challenge.",
     gitUrl: "https://github.com/farmeroy/mancala",
     liveUrl: "https://farmeroy.github.io/mancala/",
+  },
+  {
+    title: "Meet App",
+    img: "/meet-app.png",
+    alt: "An image of meet app",
+    description:
+      "A full-stack, progressive web app built with React and AWS Lambda. Users can access events via Google Calender API to search for web developer workshops across the globe, and also view data related to their search.Users sign in with GoogleAuth0",
+    gitUrl: "https://github.com/farmeroy/meet-app",
+    liveUrl: "https://farmeroy.github.io/meet-app",
+    caseStudy: "meet-app",
   },
   {
     title: "Goodnight Circus Landing Page",
