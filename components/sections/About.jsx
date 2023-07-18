@@ -10,18 +10,9 @@ const About = () => {
         </Grid>
         <Grid item md={8} xs={12}>
           <Typography variant="p">
-            I&apos;m a web developer based in Northern California, specializing
-            in NextJS with TypeScript and experienced in working on large-scale
-            React codebases. My focus revolves around creating intuitive UI
-            components, tackling complex forms, and designing robust database
+            I&apos;m a web developer based in Northern California. Passionate
+            about creating intuitive UI components and designing robust database
             models and APIs to deliver exceptional user experiences.
-            <br />
-            <br />
-            Previously a jazz violinist perpetually on tour, I came to web
-            development during the pandemic, discovering a creative and
-            intellectual outlet in programming while building websites for
-            artists in my community. Witnessing the impact of that work, I
-            poured my heart into building and learning about web applications.
             <br />
             <br />I believe in the power of the web to change the world, and
             I&apos;m excited to make an impact. My previous role was working at
@@ -49,6 +40,13 @@ const About = () => {
             startup Sick in the City.
             <br />
             <br />
+            Previously a jazz violinist perpetually on tour, I came to web
+            development during the pandemic, discovering a creative and
+            intellectual outlet in programming while building websites for
+            artists in my community. Witnessing the impact of that work, I
+            poured my heart into building and learning about web applications.
+            <br />
+            <br />
             With years of collaborating in diverse ensembles and dedicating
             myself to practice, I know how to work on a team and also how to
             maintain discipline and focus in remote work.
@@ -60,9 +58,9 @@ const About = () => {
             University.
             <br />
             <br />
-            If you&apos;re seeking a developer who brings creativity,
-            dedication, and a fresh perspective to your tech company&apos;s
-            mission, let&apos; talk!
+            If you&apos;re looking for a developer who brings creativity,
+            dedication, and a fresh perspective to your company&apos;s mission,
+            let&apos;s talk!
             <br />
             <br />
           </Typography>
