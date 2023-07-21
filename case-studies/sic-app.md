@@ -16,7 +16,7 @@ title: 'Accessibility Quiz'
 
 # Overview
 This was a project for UK non-profit [Sick in the City](https://sicofficial.co.uk). 
-This is a full stack app that contains a user facing quiz, an admin dashboard, and a database containing quiz questions, answers, feedback, and web analytic.
+This is a full stack app that contains a user facing quiz, an admin dashboard, and a database containing quiz questions, answers, feedback, and web analytics.
 
 For the quiz, users answer a series of survey questions regarding their workplace,
 receive a score and feedback,
@@ -66,7 +66,7 @@ client answers, as well as some simple web analytics.
 ## Building for Maintainability
 I knew I would be leaving Alice with a lot of code she couldn't maintain herself and had a view that whatever I built should be easy to work with for a future developer.
 
-The first choice I has was 
+The first choice I had was 
 deciding *where* to build it.
 The Sick in the City website is hosted on Squarespace,
 and I originally considered building the app
@@ -193,8 +193,8 @@ First of all, as the company has no budget some more simple solutions (like usin
 Secondly, I need to produce something of quality that will be maintainable in the future for free.
 This means that I chose technologies I was most familiar with and would have fast development speeds with,
 rather than picking what would necessarily be the best option.
-
-For instance, perhaps it would have been best to set the entire site up with Wordpress to allow Sick in the City to have more control, but as I am not a Wordpress developer, this would have resulted in a much slower development time for myself. 
+For instance, perhaps it would have been best to set the entire site up with Wordpress to allow Sick in the City to have more control,
+but as I am not a Wordpress developer, this would have resulted in a much slower development time for myself. 
 
 Aside from this, the technical challenges were building robust data models and writing code that will be maintainable and extendable in the future.
 
