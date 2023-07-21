@@ -3,9 +3,19 @@ import ProjectCard from "../../components/UI/ProjectCard";
 
 const projectArr = [
   {
+    title: "Accessibility Quiz with Admin Back End",
+    img: "/sic-questions-example.png",
+    alt: "A list of items in an accessibility survey",
+    description:
+      "This is a survey application built for UK non-profit Sick in the City, allowing potential clients to complete a workplace accessibility quiz, as well as an admin back end for managing quiz content and viewing data analytics. Built with Next.js, TypeScript, and MongoDB.",
+    gitUrl: "https://github.com/farmeroy/sic-accessibility-form",
+    liveUrl: "https:://quiz.sicofficial.co.uk",
+    caseStudy: "sic-app",
+  },
+  {
     title: "Synth App",
     img: "/synth-app-1.png",
-    alt: "A screen shot of synth app sequener",
+    alt: "A screen shot of synth app sequencer",
     description:
       "A Synthesizer/Sequencer application built with React/TypeScript, Next.js, Tone.js, using Recoil for state management. The user can create a pallet of notes and play music! This is the beginning of a larger, full-stack project",
     gitUrl: "https://github.com/farmeroy/synth-app",

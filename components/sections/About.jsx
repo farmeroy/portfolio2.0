@@ -10,7 +10,7 @@ const About = () => {
         </Grid>
         <Grid item md={8} xs={12}>
           <Typography variant="p">
-            I&apos;m a web developer based in Northern California. Passionate
+            I&apos;m a web developer based in Northern California, passionate
             about creating intuitive UI components and designing robust database
             models and APIs to deliver exceptional user experiences.
             <br />
