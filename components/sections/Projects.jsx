@@ -9,7 +9,7 @@ const projectArr = [
     description:
       "This is a survey application built for UK non-profit Sick in the City, allowing potential clients to complete a workplace accessibility quiz, as well as an admin back end for managing quiz content and viewing data analytics. Built with Next.js, TypeScript, and MongoDB.",
     gitUrl: "https://github.com/farmeroy/sic-accessibility-form",
-    liveUrl: "https:://quiz.sicofficial.co.uk",
+    liveUrl: "https://quiz.sicofficial.co.uk",
     caseStudy: "sic-app",
   },
   {
