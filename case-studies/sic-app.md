@@ -190,13 +190,18 @@ I chose Netlify, as they have a generous free tier.
 # Challenges
 Building something like this as a volunteer comes with many challenges. 
 First of all, as the company has no budget some more simple solutions (like using web analytics provided by Netfily, or a proper CMS from a SaaS company) are out of the question. 
-Secondly, I need to produce something of quality that will be maintainable in the future for free.
-This means that I chose technologies I was most familiar with and would have fast development speeds with,
-rather than picking what would necessarily be the best option.
-For instance, perhaps it would have been best to set the entire site up with Wordpress to allow Sick in the City to have more control,
-but as I am not a Wordpress developer, this would have resulted in a much slower development time for myself. 
 
-Aside from this, the technical challenges were building robust data models and writing code that will be maintainable and extendable in the future.
+Secondly, I need to produce something of quality,
+that will be maintainable in the future,
+and that is shippable in a minimum time frame,
+for free.
+This meant that I chose technologies I was most familiar with, 
+with which I will be able to produce the best results for the least effort, 
+rather than picking what would necessarily be the best option.
+Perhaps a Django app (with its built in admin view) or 
+a Wordpress site that Alice would have more control over 
+could have been great options,
+but I went with the devil I know (Next.js).
 
 # Conclusion
 This was a very satisfying project to work on,
