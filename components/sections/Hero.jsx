@@ -23,10 +23,6 @@ const Hero = () => {
           I&apos;m a full stack developer working primarily with React and
           TypeScript.
           <br />
-          <br />
-          Currently I&apos;m excited about using Rust to build performant,
-          stable, and scalable systems.
-          <br />
           <br />I love ambitious goals, a bit of adventure, and close
           companions.
         </Typography>

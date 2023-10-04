@@ -21,9 +21,10 @@ const About = () => {
             <br />
             <br />
             I love learning new things and having new experiences. Currently,
-            that means digging into Rust, furthering my knowledge of databases,
-            and working towards a BSc of Computer Science through the Open
-            University.
+            I'm excited about using Rust to build performant, stable, and
+            scalable systems, furthering my knowledge of databases and data
+            modeling, and working towards a BSc of Computer Science through the
+            Open University.
             <br />
             <br />
           </Typography>
