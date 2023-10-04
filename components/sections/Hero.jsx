@@ -20,12 +20,17 @@ const Hero = () => {
       </Typography>
       <div style={{ padding: 2 }}>
         <Typography fontSize={18} className={styles.code}>
-          I&apos;m a full stack developer working with React, TypeScript, and
-          excited about Rust.
-          <br /> I once travelled by land from Istanbul to Singapore with a
-          bicycle circus - I love ambitious goals, a bit of adventure, and close
+          I&apos;m a full stack developer working primarily with React and
+          TypeScript.
+          <br />
+          <br />
+          Currently I&apos;m excited about using Rust to build performant,
+          stable, and scalable systems.
+          <br />
+          <br />I love ambitious goals, a bit of adventure, and close
           companions.
         </Typography>
+        <br />
         <br />
       </div>
       <div>

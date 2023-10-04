@@ -10,16 +10,14 @@ const About = () => {
         </Grid>
         <Grid item md={8} xs={12}>
           <Typography variant="p">
-            Previously a jazz violinist perpetually on tour, I came to web
-            development during the pandemic, discovering a creative and
-            intellectual outlet in programming while building websites for
-            artists in my community. Witnessing the impact of that work, I
-            poured my heart into building and learning about web applications.
+            Before becoming a software developer I was a jazz violinist and
+            absolutely thrive on small teams where we take turns leading and
+            supporting: that is essentially what improvised music is, to me that
+            is the essence of the creative process, no matter what the medium.
             <br />
             <br />
-            With years of collaborating in diverse ensembles and dedicating
-            myself to practice, I know how to work on a team and also how to
-            maintain discipline and focus in remote work.
+            I enjoy creating intuitive user experiences, refactoring complicated
+            code, and solving problems of every shape and dimension.
             <br />
             <br />
             I love learning new things and having new experiences. Currently,
