@@ -10,7 +10,9 @@ const ContactForm = () => {
         </Grid>
         <Grid item md={6}>
           <Typography variant="p">
-            Send me a message, I will respond with two days.
+            If you&apos;re looking for a developer who brings creativity,
+            dedication, and a fresh perspective to your company&apos;s mission,
+            let&apos;s talk!
           </Typography>
         </Grid>
         <Grid item xs={12} md={6}>

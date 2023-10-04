@@ -28,11 +28,6 @@ const About = () => {
             University.
             <br />
             <br />
-            If you&apos;re looking for a developer who brings creativity,
-            dedication, and a fresh perspective to your company&apos;s mission,
-            let&apos;s talk!
-            <br />
-            <br />
           </Typography>
         </Grid>
         <Grid item xs={6} md={4}>
