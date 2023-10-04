@@ -10,36 +10,6 @@ const About = () => {
         </Grid>
         <Grid item md={8} xs={12}>
           <Typography variant="p">
-            I&apos;m a web developer based in Northern California, passionate
-            about creating intuitive UI components and designing robust database
-            models and APIs to deliver exceptional user experiences.
-            <br />
-            <br />I believe in the power of the web to change the world, and
-            I&apos;m excited to make an impact. My previous role was working at
-            an early stage startup (
-            <Link
-              href="https://www.withencore.com/"
-              target="_blank"
-              rel="noreferrer"
-              color="secondary"
-            >
-              WithEncore
-            </Link>
-            ), building financial tools for the entertainment industry to change
-            the way Hollywood does business. Not solely focused on finances, I
-            also volunteer time to{" "}
-            <Link
-              href="https://radicalengineers.com/"
-              target="_blank"
-              rel="noreferrer"
-              color="secondary"
-            >
-              Radical Engineers
-            </Link>
-            , most recently working on a survey app for workplace accessibility
-            startup Sick in the City.
-            <br />
-            <br />
             Previously a jazz violinist perpetually on tour, I came to web
             development during the pandemic, discovering a creative and
             intellectual outlet in programming while building websites for
