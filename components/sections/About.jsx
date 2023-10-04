@@ -10,14 +10,14 @@ const About = () => {
         </Grid>
         <Grid item md={8} xs={12}>
           <Typography variant="p">
+            I enjoy creating intuitive user experiences, refactoring complicated
+            code, and solving problems of every shape and dimension.
+            <br />
+            <br />
             Before becoming a software developer I was a jazz violinist and
             absolutely thrive on small teams where we take turns leading and
             supporting: that is essentially what improvised music is, to me that
             is the essence of the creative process, no matter what the medium.
-            <br />
-            <br />
-            I enjoy creating intuitive user experiences, refactoring complicated
-            code, and solving problems of every shape and dimension.
             <br />
             <br />
             I love learning new things and having new experiences. Currently,
