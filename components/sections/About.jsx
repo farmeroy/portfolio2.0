@@ -30,7 +30,7 @@ const About = () => {
           </Typography>
         </Grid>
         <Grid item xs={6} md={4}>
-          <Box sx={{ position: "relative", "object-fit": "contain" }}>
+          <Box sx={{ position: "relative", objectFit: "contain" }}>
             <Image
               alt="a portrait of me"
               width={360}

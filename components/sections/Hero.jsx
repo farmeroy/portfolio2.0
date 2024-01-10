@@ -20,8 +20,8 @@ const Hero = () => {
       </Typography>
       <div style={{ padding: 2 }}>
         <Typography fontSize={18} className={styles.code}>
-          I&apos;m a full stack developer working primarily with React and
-          TypeScript.
+          I&apos;m a full stack developer working primarily with React (Next.js)
+          and TypeScript.
           <br />
           <br />I love ambitious goals, a bit of adventure, and close
           companions.
