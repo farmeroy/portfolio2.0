@@ -2,8 +2,6 @@ import { Link, Button, Grid, Typography, Box } from "@mui/material";
 import ProjectCard from "../../components/UI/ProjectCard";
 import { projects } from "../../lib/projects";
 
-console.log({ projects });
-
 const Projects = () => {
   return (
     <Box id="Portfolio" component="div" sx={{ marginBottom: 12 }}>
