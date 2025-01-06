@@ -50,7 +50,7 @@ export default function Home(props) {
         </span>
         <div>
           <p className={styles.imprint}>
-            © 2023 Raffaele Cataldo
+            © 2025 Raffaele Cataldo
             <br />
             raffaelecataldo.dev@gmail.com
           </p>
