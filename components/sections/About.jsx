@@ -44,7 +44,7 @@ const About = () => {
           <Button color="secondary" variant="contained" sx={{ padding: 2 }}>
             <Link
               underline="none"
-              href="/RaffaeleCataldoCV.pdf"
+              href="/RaffaeleCataldoCV2025.pdf"
               target="_blank"
             >
               Download Resume
