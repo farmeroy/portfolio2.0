@@ -82,7 +82,7 @@ const Navbar = (props) => {
   const resume = (
     <MuiLink
       underline="none"
-      href="./RaffaeleCataldoCV2025.pdf"
+      href="/Cataldo-Raffaele-CV.pdf"
       target="_blank"
       sx={{ my: 2, color: "white", display: "block" }}
     >
