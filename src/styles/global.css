@@ -3,6 +3,7 @@
 /* ─── Design tokens ─────────────────────────────────────────── */
 :root {
   /* Colors */
+  --color-deep:    #0a0b12;  /* gradient start — darker than surface */
   --color-surface: #161822;
   --color-accent:  #89b9c2;
   --color-bg:      #26293a;
@@ -43,8 +44,8 @@
   --radius-lg: 6px;
 
   /* Layout */
-  --max-width:     1200px;
-  --content-width: min(83.333%, var(--max-width));
+  --max-width:     1400px;
+  --content-width: min(88%, var(--max-width));
 }
 
 /* ─── Reset ─────────────────────────────────────────────────── */
@@ -68,7 +69,7 @@
     line-height: 1.7;
     color: var(--color-text);
     min-height: 100vh;
-    background: linear-gradient(to bottom, var(--color-surface), var(--color-bg));
+    background: linear-gradient(to bottom, var(--color-deep), var(--color-bg));
     background-attachment: fixed;
   }
 
@@ -144,7 +145,7 @@
     gap: var(--space-6);
   }
 
-  .nav-logo img { height: var(--space-8); width: auto; }
+  .nav-logo img { height: var(--space-16); width: auto; }
 
   .nav-links {
     display: flex;
@@ -228,7 +229,7 @@
     flex-wrap: wrap;
   }
 
-  .footer-inner img { height: var(--space-8); width: auto; }
+  .footer-inner img { height: var(--space-16); width: auto; }
 
   .footer-imprint {
     font-size: var(--text-xs);
@@ -267,7 +268,7 @@
     justify-content: center;
   }
 
-  .hero p { font-size: var(--text-lg); max-width: 55ch; }
+  .hero p { font-size: var(--text-lg); }
 
   .hero-actions {
     display: flex;
