@@ -1,0 +1,149 @@
+---
+import Base from '../layouts/Base.astro';
+import projects from '../data/projects.json';
+---
+<Base title="Raffaele Cataldo - Developer">
+  <a id="top"></a>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Home">
+        <img src="/R.svg" alt="RC logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="/Cataldo-Raffaele-CV.pdf" target="_blank" rel="noopener" class="nav-accent">Resume</a></li>
+        <li>
+          <a href="https://github.com/farmeroy" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/raffaele-cataldo-dev/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+      <details class="nav-mobile">
+        <summary aria-label="Open menu">&#9776;</summary>
+        <div class="nav-dropdown">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <a href="/Cataldo-Raffaele-CV.pdf" target="_blank" rel="noopener">Resume</a>
+          <a href="https://github.com/farmeroy" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/raffaele-cataldo-dev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </details>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <main>
+
+      <section class="hero">
+        <h1>Raffaele Cataldo</h1>
+        <p>
+          I'm a full stack developer working primarily with React (Next.js) and TypeScript.<br /><br />
+          I love ambitious goals, a bit of adventure, and close companions.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Check Out my Portfolio</a>
+          <a href="https://github.com/farmeroy" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Check out my GitHub</a>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I enjoy creating intuitive user experiences, refactoring complicated code, and solving problems of every shape and dimension.
+            </p>
+            <p>
+              Before becoming a software developer I was a jazz violinist and absolutely thrive on small teams where we take turns leading and supporting: that is essentially what improvised music is, to me that is the essence of the creative process, no matter what the medium.
+            </p>
+            <p>
+              I love learning new things and having new experiences. Currently, I'm excited about using Rust to build performant, stable, and scalable systems, furthering my knowledge of databases and data modeling, and working towards a BSc of Computer Science through the Open University.
+            </p>
+            <a href="/Cataldo-Raffaele-CV.pdf" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 1rem;">
+              Download Resume
+            </a>
+          </div>
+          <div class="about-portrait">
+            <img src="/static/media/portrait1bw.JPG" alt="A portrait of Raffaele Cataldo" width="360" height="360" />
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+          {projects.map((project) => (
+            <article class="project-card">
+              <a href={project.liveUrl ?? project.gitUrl} target="_blank" rel="noopener noreferrer" class="card-image-link">
+                <img src={project.img} alt={project.alt} width="560" height="200" loading="lazy" />
+              </a>
+              <div class="card-body">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div class="card-actions">
+                  {project.caseStudy && (
+                    <a href={`/case-studies/${project.caseStudy}`}>Case Study</a>
+                  )}
+                  {project.liveUrl && (
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">See Live</a>
+                  )}
+                  {project.gitUrl && (
+                    <a href={project.gitUrl} target="_blank" rel="noopener noreferrer">See Code</a>
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+        <div class="projects-cta">
+          <a href="https://github.com/farmeroy" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            See all on GitHub
+          </a>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-grid">
+          <p>
+            If you're looking for a developer who brings creativity, dedication, and a fresh perspective to your company's mission, let's talk!
+          </p>
+          <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input id="email" type="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Your message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline">Submit</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="/" aria-label="Home">
+        <img src="/R.svg" alt="RC logo" />
+      </a>
+      <p class="footer-imprint">
+        &copy; 2025 Raffaele Cataldo<br />
+        raffaelecataldo.dev@gmail.com
+      </p>
+    </div>
+  </footer>
+</Base>

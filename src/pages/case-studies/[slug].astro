@@ -1,0 +1,90 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('case-studies');
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+<Base title={`${entry.data.title} — Raffaele Cataldo`}>
+  <a id="top"></a>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Home">
+        <img src="/R.svg" alt="RC logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/Cataldo-Raffaele-CV.pdf" target="_blank" rel="noopener" class="nav-accent">Resume</a></li>
+        <li>
+          <a href="https://github.com/farmeroy" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/raffaele-cataldo-dev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </li>
+      </ul>
+      <details class="nav-mobile">
+        <summary aria-label="Open menu">&#9776;</summary>
+        <div class="nav-dropdown">
+          <a href="/">Home</a>
+          <a href="/#about">About</a>
+          <a href="/#contact">Contact</a>
+          <a href="/Cataldo-Raffaele-CV.pdf" target="_blank" rel="noopener">Resume</a>
+          <a href="https://github.com/farmeroy" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/raffaele-cataldo-dev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </details>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <main>
+      <article class="case-study-content">
+        <Content />
+      </article>
+
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-grid">
+          <p>
+            If you're looking for a developer who brings creativity, dedication, and a fresh perspective to your company's mission, let's talk!
+          </p>
+          <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input id="email" type="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Your message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="/" aria-label="Home">
+        <img src="/R.svg" alt="RC logo" />
+      </a>
+      <p class="footer-imprint">
+        &copy; 2025 Raffaele Cataldo<br />
+        raffaelecataldo.dev@gmail.com
+      </p>
+    </div>
+  </footer>
+</Base>

@@ -1,0 +1,32 @@
+---
+interface Props {
+  title?: string;
+}
+const { title = 'Raffaele Cataldo - Developer' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content="Raffaele Cataldo - Web Developer" />
+    <link rel="icon" href="/R.svg" />
+    <meta property="og:title" content="Raffaele Cataldo" />
+    <meta property="og:description" content="Raffaele Cataldo - Web Developer" />
+    <meta property="og:image" content="/siteImage.png" />
+    <meta property="og:url" content="https://raffaelecataldo.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;600&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <slot />
+    <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>
