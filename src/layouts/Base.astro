@@ -41,4 +41,11 @@ const { title = 'Raffaele Cataldo - Developer' } = Astro.props;
   const show = () => btn.classList.toggle('visible', window.scrollY > 300);
   window.addEventListener('scroll', show, { passive: true });
   show();
+
+  const navMobile = document.querySelector('.nav-mobile') as HTMLDetailsElement;
+  if (navMobile) {
+    document.addEventListener('click', (e) => {
+      if (!navMobile.contains(e.target as Node)) navMobile.open = false;
+    });
+  }
 </script>
