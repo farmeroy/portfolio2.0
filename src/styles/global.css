@@ -353,15 +353,11 @@
     gap: var(--space-6);
   }
 
-  @container projects-section (min-width: 520px) {
+  @container projects-section (min-width: 680px) {
     .projects-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
-  @container projects-section (min-width: 800px) {
-    .projects-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-
-  @container projects-section (min-width: 1100px) {
+  @container projects-section (min-width: 1060px) {
     .projects-grid { grid-template-columns: repeat(4, 1fr); }
   }
 
