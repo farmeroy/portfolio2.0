@@ -27,7 +27,13 @@ import projects from '../data/projects.json';
         </li>
       </ul>
       <details class="nav-mobile">
-        <summary aria-label="Open menu">&#9776;</summary>
+        <summary aria-label="Open menu" class="btn btn-outline btn-icon btn-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </summary>
         <div class="nav-dropdown">
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
@@ -91,16 +97,16 @@ import projects from '../data/projects.json';
                 <p>{project.description}</p>
                 <div class="card-actions">
                   {project.caseStudy && (
-                    <a href={`/case-studies/${project.caseStudy}`}>Case Study</a>
+                    <a href={`/case-studies/${project.caseStudy}`} class="btn btn-outline">Case Study</a>
                   )}
                   {project.liveUrl && (
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} — live site`}>
-                      Live <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} — live site`} class="btn btn-outline">
+                      Live <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                     </a>
                   )}
                   {project.gitUrl && (
-                    <a href={project.gitUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} — source code`}>
-                      Code <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <a href={project.gitUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} — source code`} class="btn btn-outline">
+                      Code <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                     </a>
                   )}
                 </div>

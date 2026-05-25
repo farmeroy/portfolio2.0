@@ -46,6 +46,23 @@
   /* Layout */
   --max-width:     1400px;
   --content-width: min(88%, var(--max-width));
+
+  /* Buttons — alias spacing/type tokens so sizing is a single swap point */
+  --btn-pad-y:    var(--space-2);   /*  8px */
+  --btn-pad-x:    var(--space-4);   /* 16px */
+  --btn-font:     var(--text-sm);   /* 14px */
+
+  --btn-pad-y-sm: var(--space-1);   /*  4px */
+  --btn-pad-x-sm: var(--space-2);   /*  8px */
+  --btn-font-sm:  var(--text-xs);   /* 12px */
+
+  --btn-pad-y-lg: var(--space-3);   /* 12px */
+  --btn-pad-x-lg: var(--space-5);   /* 20px */
+  --btn-font-lg:  var(--text-base); /* 18px — matches body/card text */
+
+  /* Icons — em-based so they scale with the parent's font-size */
+  --icon-sm: 0.85em;
+  --icon-md: 1.1em;
 }
 
 /* ─── Reset ─────────────────────────────────────────────────── */
@@ -172,9 +189,6 @@
   .nav-mobile summary {
     list-style: none;
     cursor: pointer;
-    color: var(--color-accent);
-    font-size: var(--text-lg);
-    padding: var(--space-1);
     user-select: none;
   }
 
@@ -316,14 +330,19 @@
 @layer components {
   /* Buttons */
   .btn {
-    display: inline-block;
-    padding: var(--space-2) var(--space-4);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+    padding: var(--btn-pad-y) var(--btn-pad-x);
     border-radius: var(--radius);
     font-family: var(--font-body);
-    font-size: var(--text-sm);
+    font-size: var(--btn-font);
+    line-height: 1.2;
     text-decoration: none;
     cursor: pointer;
-    border: none;
+    border: 1px solid transparent;  /* keeps height parity with .btn-outline */
+    background: none;
     transition: opacity 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
   }
 
@@ -336,8 +355,25 @@
   .btn-outline {
     background: transparent;
     color: var(--color-accent);
-    border: 1px solid var(--color-accent);
+    border-color: var(--color-accent);
   }
+
+  .btn-sm {
+    padding: var(--btn-pad-y-sm) var(--btn-pad-x-sm);
+    font-size: var(--btn-font-sm);
+  }
+
+  .btn-lg {
+    padding: var(--btn-pad-y-lg) var(--btn-pad-x-lg);
+    font-size: var(--btn-font-lg);
+  }
+
+  .btn-icon { padding: var(--btn-pad-y); aspect-ratio: 1; }
+  .btn-icon.btn-sm { padding: var(--btn-pad-y-sm); }
+  .btn-icon.btn-lg { padding: var(--btn-pad-y-lg); }
+
+  .btn svg { width: var(--icon-sm); height: var(--icon-sm); flex: none; }
+  .btn-icon svg { width: var(--icon-md); height: var(--icon-md); }
 
   .btn:hover { opacity: 0.85; }
 
@@ -401,44 +437,22 @@
 
   .card-actions {
     display: flex;
-    flex-wrap: nowrap;
     gap: var(--space-2);
   }
 
-  .card-actions a {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-1);
-    font-size: var(--text-xs);
-    padding: var(--space-1) var(--space-2);
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--color-accent);
-    color: var(--color-accent);
-    text-decoration: none;
-    white-space: nowrap;
+  /* Font + horizontal padding scale fluidly with card width so 3 buttons stay on one row */
+  .card-actions .btn {
+    font-size: clamp(var(--text-xs), 3.5cqi, var(--text-base));
+    padding: var(--space-1) clamp(var(--space-1), 2cqi, var(--space-3));
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    white-space: nowrap;
   }
 
-  .card-actions a:hover {
+  .card-actions .btn:hover {
     background: var(--color-accent);
     color: var(--color-surface);
     opacity: 1;
-  }
-
-  @container project-card (min-width: 380px) {
-    .card-actions a {
-      font-size: var(--text-sm);
-      padding: var(--space-2) var(--space-3);
-    }
-  }
-
-  @container project-card (min-width: 600px) {
-    .card-actions a {
-      font-size: var(--text-base);
-      padding: var(--space-2) var(--space-4);
-    }
   }
 
   .projects-cta {
