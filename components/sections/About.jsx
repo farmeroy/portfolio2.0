@@ -35,7 +35,7 @@ const About = () => {
               alt="a portrait of me"
               width={360}
               height={360}
-              src="/static/media/portrait1bw.JPG"
+              src="/portrait1bw.JPG"
             />
           </Box>
         </Grid>
