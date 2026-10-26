@@ -1,0 +1,28 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Contact from '../../components/Contact.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('case-studies');
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+<Base title={`${entry.data.title} — Raffaele Cataldo`}>
+  <div class="page-wrapper">
+    <main>
+      <article class="case-study-content">
+        <h1>{entry.data.title}</h1>
+        <Content />
+      </article>
+
+      <Contact />
+    </main>
+  </div>
+</Base>

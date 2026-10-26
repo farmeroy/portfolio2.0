@@ -1,0 +1,60 @@
+---
+import { getImage } from 'astro:assets';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import siteImageSrc from '../assets/siteImage.png';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = 'Raffaele Cataldo - Developer',
+  description = 'Raffaele Cataldo - Web Developer',
+} = Astro.props;
+
+const optimizedSiteImage = await getImage({ src: siteImageSrc, format: 'png' });
+const ogImageUrl = new URL(optimizedSiteImage.src, Astro.site).toString();
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;600&family=Ubuntu+Mono:wght@400&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <a id="top"></a>
+    <Nav />
+    <slot />
+    <Footer />
+    <a href="#top" class="back-to-top" aria-label="Back to top">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
+        <title>Scroll to top</title>
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </a>
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>
+
+<script>
+  const btn = document.querySelector('.back-to-top') as HTMLElement;
+  const show = () => btn.classList.toggle('visible', window.scrollY > 300);
+  window.addEventListener('scroll', show, { passive: true });
+  show();
+</script>

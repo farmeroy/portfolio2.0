@@ -1,0 +1,88 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import projects from '../data/projects';
+import Contact from '../components/Contact.astro';
+import portrait from '../assets/portrait1bw.JPG';
+---
+<Base title="Raffaele Cataldo - Developer">
+  <div class="page-wrapper">
+    <main>
+
+      <section class="hero">
+        <h1>Raffaele Cataldo</h1>
+        <p>
+        I'm a full stack developer, experienced with React, Next.js, Django, and HTMX<br /><br />
+          I love ambitious goals, a bit of adventure, and close companions.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Check Out my Portfolio</a>
+          <a href="https://github.com/farmeroy" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Check out my GitHub</a>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I enjoy creating intuitive user experiences, refactoring complicated code, and solving problems of every shape and dimension.
+            </p>
+            <p>
+              Before becoming a software developer I was a jazz violinist and absolutely thrive on small teams where we take turns leading and supporting: that is essentially what improvised music is, to me that is the essence of the creative process, no matter what the medium.
+            </p>
+            <p>
+              I love learning new things and having new experiences. Currently, I'm excited about using Rust to build performant, stable, and scalable systems, furthering my knowledge of databases and data modeling, and working towards a BSc of Computer Science through the Open University.
+            </p>
+            <a href="/Cataldo-Raffaele-CV.pdf" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 1rem;">
+              Download Resume
+            </a>
+          </div>
+          <div class="about-portrait">
+            <Image src={portrait} alt="A portrait of Raffaele Cataldo" width={360} height={360} />
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+          {projects.map((project) => (
+            <article class="project-card">
+              <a href={project.liveUrl ?? project.gitUrl} target="_blank" rel="noopener noreferrer" class="card-image-link">
+                <Image src={project.img} alt={project.alt} loading="lazy" />
+              </a>
+              <div class="card-body">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div class="card-actions">
+                  {project.caseStudy && (
+                    <a href={`/case-studies/${project.caseStudy}`} class="btn btn-outline">Case Study</a>
+                  )}
+                  {project.liveUrl && (
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} — live site`} class="btn btn-outline">
+                      Live <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                  )}
+                  {project.gitUrl && (
+                    <a href={project.gitUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} — source code`} class="btn btn-outline">
+                      Code <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+        <div class="projects-cta">
+          <a href="https://github.com/farmeroy" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            See all on GitHub
+          </a>
+        </div>
+      </section>
+
+      <Contact />
+
+    </main>
+  </div>
+</Base>

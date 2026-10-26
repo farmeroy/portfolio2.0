@@ -1,0 +1,56 @@
+---
+const isHome = Astro.url.pathname === '/';
+
+const links = [
+  ...(isHome ? [] : [{ href: '/', label: 'Home' }]),
+  { href: '/#about', label: 'About' },
+  { href: '/#projects', label: 'Projects' },
+  { href: '/#contact', label: 'Contact' },
+];
+
+const external = [
+  { href: 'https://github.com/farmeroy', label: 'GitHub' },
+  { href: 'https://www.linkedin.com/in/raffaele-cataldo-dev/', label: 'LinkedIn' },
+];
+---
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Home">
+      <img src="/R.svg" alt="RC logo" />
+    </a>
+    <ul class="nav-links">
+      {links.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+      <li><a href="/Cataldo-Raffaele-CV.pdf" target="_blank" rel="noopener" class="nav-accent">Resume</a></li>
+      {external.map((link) => (
+        <li><a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a></li>
+      ))}
+    </ul>
+    <details class="nav-mobile">
+      <summary aria-label="Open menu" class="btn btn-outline btn-icon btn-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </summary>
+      <div class="nav-dropdown">
+        {links.map((link) => <a href={link.href}>{link.label}</a>)}
+        <a href="/Cataldo-Raffaele-CV.pdf" target="_blank" rel="noopener">Resume</a>
+        {external.map((link) => (
+          <a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
+        ))}
+      </div>
+    </details>
+  </div>
+</nav>
+
+<script>
+  const navMobile = document.querySelector('.nav-mobile') as HTMLDetailsElement;
+  // Close on any click except the toggle itself, so tapping a link inside the dropdown closes it too
+  document.addEventListener('click', (e) => {
+    if (!(e.target as Element).closest('.nav-mobile summary')) navMobile.open = false;
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') navMobile.open = false;
+  });
+</script>
