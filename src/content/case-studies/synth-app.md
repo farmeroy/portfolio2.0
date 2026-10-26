@@ -36,9 +36,9 @@ Additionally, this sort of project will
 be easily extensible, and I plan to add more
 features in the future.
 
-# Development
+## Development
 
-## Tools and Methodologies
+### Tools and Methodologies
 
 - React/Typescript
 - Next.js
@@ -46,7 +46,7 @@ features in the future.
 - Tailwind/HeadlessUI
 - Recoil
 
-### Tone.js
+#### Tone.js
 I had already built an [synthesizer app](https://farmeroy.github.io/Noise-Machine/) with the native WebAudio API.
 One of the major issues with audio is scheduling events,
 which is not easily done with JavaScript in the browser.
@@ -60,7 +60,7 @@ Tone.js to do what I wanted. There were
 further problems incorporating it with 
 React, Next.js, and Recoil as well. 
 
-### Recoil
+#### Recoil
 My concept for the app was that the user could
 have fine-grained control over a series of 
 synthesizers, beats, and events. 
@@ -77,7 +77,7 @@ of graph of atomic state.
 This also lead to quite a lot of complications 
 when handling Tone.js events, as I will discuss later.
 
-### Tailwind/HeadlessUI
+#### Tailwind/HeadlessUI
 I wanted to have a clean UI that was also accessible.
 I love how Tailwind makes it easy to have consistent,
 responsive styles.
@@ -92,7 +92,7 @@ This is great because it allows me to have a lot of control
 over the design, while also a lot of built in accessibility
 support, without having to add a giant UI library like Chakra or Material.
 
-### TypeScript
+#### TypeScript
 I love TypeScript. While working at Encore,
 we transitioned our codebase from JavaScript to TypeScript 
 and saw and immediate increase in code quality and maintainability.
@@ -100,7 +100,7 @@ It is *so* much easier to create and maintain a complex codebase
 when types are strictly defined. 
 So I went with TypeScript. 
 
-## Final Touches
+### Final Touches
 I used Tabler-Icons-React to add some clean icons to the play button,
 [coolers.io](https://coolors.co/) to help me find a nice color scheme,
 and went with a mobile-first layout.
@@ -108,8 +108,8 @@ and went with a mobile-first layout.
 There is still a lot I would like to do with this app, 
 but as it is, it is functional and fun to play with.
 
-# Challenges
-## Tone.js
+## Challenges
+### Tone.js
 I had to spend a lot of time playing with the Tone.js API,
 exploring how to use it with React/Next and my chosen state management library.
 One major challenge was styling the currently active beat as the Transport timeline
@@ -128,7 +128,7 @@ dynamically imported, and then rendered within `Suspense`
 to ensure they do not render until the window object is available.
 
 
-## Recoil
+### Recoil
 I chose recoil because it allows for atomic control of state,
 meaning state can be updated outside of the component tree.
 A graph of dependencies can be managed so that certain atoms 
@@ -141,7 +141,7 @@ and isolated rows of notes, ensuring minimal rerenders would occur.
 However, it does come at cognitive cost of mapping all these 
 state dependencies in a graph, which I plan to do on the projects README.md.
 
-# Conclusion
+## Conclusion
 This was a sometimes frustrating but in the end satisfying project.
 One key take away for me is to not over0plan and over optimise a code base.
 I believe if I had begun with a simple implementation of my end goal 
@@ -150,5 +150,5 @@ I might have made faster progress. Quite a few times I had to backtrack,
 undo early optimisations, and rethink my entire approach.
 
 
-## Credits
+### Credits
 - Lead Developer: Raffaele Cataldo

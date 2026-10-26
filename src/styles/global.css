@@ -68,7 +68,7 @@
 /* ─── Reset ─────────────────────────────────────────────────── */
 @layer reset {
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  img { display: block; max-width: 100%; }
+  img { display: block; max-width: 100%; height: auto; }
   button, input, textarea, select { font: inherit; }
 }
 
@@ -321,9 +321,13 @@
   }
 
   /* Case study */
-  .case-study-content { max-width: 70ch; }
   .case-study-content h1 { margin-bottom: var(--space-8); }
-  .case-study-content img { margin-block: var(--space-6); border-radius: var(--radius); }
+  .case-study-content img {
+    width: auto;
+    max-height: 480px;
+    margin: var(--space-6) auto;
+    border-radius: var(--radius);
+  }
 }
 
 /* ─── Components ────────────────────────────────────────────── */

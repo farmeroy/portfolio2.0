@@ -14,7 +14,7 @@ title: 'Accessibility Quiz'
 > 
 >\- Alice Hargreaves (CEO of Sick in the City)
 
-# Overview
+## Overview
 This was a project for UK non-profit [Sick in the City](https://sicofficial.co.uk). 
 This is a full stack app that contains a user facing quiz, an admin dashboard, and a database containing quiz questions, answers, feedback, and web analytics.
 
@@ -33,7 +33,7 @@ the database used is MongoDB.
 ![example of quiz questions](../../assets/sic-questions-example.png)
 ![example of quiz feedback](../../assets/sic-results.png)
 
-# Purpose/Context
+## Purpose/Context
 
 They had produced a PDF quiz that they could send to potential clients
 to score their workplace accessibility, 
@@ -50,9 +50,9 @@ and eventually adding a database to store the results and an admin
 dashboard view where she could get some basic analytics regarding
 client answers, as well as some simple web analytics.
 
-# Development
+## Development
 
-## Tools and Methodologies
+### Tools and Methodologies
 - React/TypeScript
 - Next.js - full stack capablities
 - NodeMailer - for sending emails
@@ -63,7 +63,7 @@ client answers, as well as some simple web analytics.
 - Prisma - a strongly typed ORM
 - Netlify - for free hosting
 
-## Building for Maintainability
+### Building for Maintainability
 I knew I would be leaving Alice with a lot of code she couldn't maintain herself and had a view that whatever I built should be easy to work with for a future developer.
 
 The first choice I had was 
@@ -88,7 +88,7 @@ I also chose to style with Tailwind as it is a popular CSS library, quick for it
 
 In general, throughout development my choices were influenced by keeping dependencies minimal.
 
-## Building a Back End with Next.Js
+### Building a Back End with Next.Js
 After initial development, I had a few concerns:
 - How could the content be easily updated?
 - How could they have an easy overview of survey responses?
@@ -102,7 +102,7 @@ without my involvement.
 
 To accomplish this, I ported the project to Next.js
 
-## Contact form and sharing the results
+### Contact form and sharing the results
 Alice requested that when the user emails here,
 the results of the data are shared with her.
 
@@ -123,11 +123,11 @@ I also validate all data on the backend.
 ![contact form](../../assets/sic-contact-form-error.png)
 
 
-## Modeling the Data: MongoDB and Prisma
+### Modeling the Data: MongoDB and Prisma
 I chose MongoDB because it is easy to set up a free database on their platform. I chose Prisma as an ORM because I had used it in my job at WithEncore and found it's models to be easier to work with than Mongoose.
 Prisma allows for strongly typed models and also manages relations in MongoDB very well, making it almost like a relational database.
 
-## Web analytics
+### Web analytics
 My first priority was basic web analytics.
 It is so useful to know if people are viewing your site.
 I decided on three data points to collect:
@@ -140,7 +140,7 @@ without collecting any data or storing cookies.
 
 This was easily accomplished by sending a time stamp to the database throughout the various points in the quiz flow.
 
-## Quiz Results Data
+### Quiz Results Data
 Although the quiz results are shared in an email, 
 we decided it would be great to be able to view
 the results in aggregate. 
@@ -163,12 +163,12 @@ I used Recharts, an open source react package based on SVGs, to display all data
 
 ![web analytics](../../assets/sic-analytics.png)
 
-## Custom CMS
+### Custom CMS
 I created basic CMS for updating the content of the quiz as well as the feedback. 
 
 ![basic CMS view](../../assets/sic-questions-cms.png)
 
-## NextAuth
+### NextAuth
 In order for the admin dashboard to go live,
 I had to consider authentication and authorization.
 The obvious choice was NextAuth, 
@@ -184,10 +184,10 @@ Since no other emails are present in the database,
 any other email entered will result in nothing 
 happening.
 
-## Deployment
+### Deployment
 I chose Netlify, as they have a generous free tier.
 
-# Challenges
+## Challenges
 Building something like this as a volunteer comes with many challenges. 
 First of all, as the company has no budget some more simple solutions (like using web analytics provided by Netfily, or a proper CMS from a SaaS company) are out of the question. 
 
@@ -203,6 +203,6 @@ a Wordpress site that Alice would have more control over
 could have been great options,
 but I went with the devil I know (Next.js).
 
-# Conclusion
+## Conclusion
 This was a very satisfying project to work on,
 and my client was extremely happy with the result.
