@@ -54,7 +54,7 @@ import portrait from '../assets/portrait1bw.JPG';
       <section class="hero">
         <h1>Raffaele Cataldo</h1>
         <p>
-          I'm a full stack developer working primarily with React (Next.js) and TypeScript.<br /><br />
+        I'm a full stack developer, experienced with React, Next.js, Django, and HTMX<br /><br />
           I love ambitious goals, a bit of adventure, and close companions.
         </p>
         <div class="hero-actions">
@@ -92,7 +92,7 @@ import portrait from '../assets/portrait1bw.JPG';
           {projects.map((project) => (
             <article class="project-card">
               <a href={project.liveUrl ?? project.gitUrl} target="_blank" rel="noopener noreferrer" class="card-image-link">
-                <Image src={project.img} alt={project.alt} width={560} height={200} loading="lazy" />
+                <Image src={project.img} alt={project.alt} loading="lazy" />
               </a>
               <div class="card-body">
                 <h3>{project.title}</h3>
