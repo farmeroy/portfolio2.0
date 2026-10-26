@@ -20,8 +20,8 @@ to allow it to scale easily to a larger app,
 eventually with a login option that 
 will allow users to save their work.
 
-![synth-app screenshot](/synth-app-1.png)
-![note-picker modal](/synth-app-2.png)
+![synth-app screenshot](../../assets/synth-app-1.png)
+![note-picker modal](../../assets/synth-app-2.png)
 
 ## Purpose/Context
 I wanted to create something fun,

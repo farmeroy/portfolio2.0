@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
-import projects from '../data/projects.json';
+import projects from '../data/projects';
+import portrait from '../assets/portrait1bw.JPG';
 ---
 <Base title="Raffaele Cataldo - Developer">
   <a id="top"></a>
@@ -79,7 +81,7 @@ import projects from '../data/projects.json';
             </a>
           </div>
           <div class="about-portrait">
-            <img src="/static/media/portrait1bw.JPG" alt="A portrait of Raffaele Cataldo" width="360" height="360" />
+            <Image src={portrait} alt="A portrait of Raffaele Cataldo" width={360} height={360} />
           </div>
         </div>
       </section>
@@ -90,7 +92,7 @@ import projects from '../data/projects.json';
           {projects.map((project) => (
             <article class="project-card">
               <a href={project.liveUrl ?? project.gitUrl} target="_blank" rel="noopener noreferrer" class="card-image-link">
-                <img src={project.img} alt={project.alt} width="560" height="200" loading="lazy" />
+                <Image src={project.img} alt={project.alt} width={560} height={200} loading="lazy" />
               </a>
               <div class="card-body">
                 <h3>{project.title}</h3>
@@ -127,8 +129,9 @@ import projects from '../data/projects.json';
           <p>
             If you're looking for a developer who brings creativity, dedication, and a fresh perspective to your company's mission, let's talk!
           </p>
-          <form name="contact" method="POST" data-netlify="true">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" >
             <input type="hidden" name="form-name" value="contact" />
+            <p hidden><input name="bot-field" /></p>
             <div class="form-group">
               <label for="email">Email address</label>
               <input id="email" type="email" name="email" required />

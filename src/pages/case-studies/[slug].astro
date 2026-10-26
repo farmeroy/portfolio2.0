@@ -59,8 +59,9 @@ const { Content } = await render(entry);
           <p>
             If you're looking for a developer who brings creativity, dedication, and a fresh perspective to your company's mission, let's talk!
           </p>
-          <form name="contact" method="POST" data-netlify="true">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact" />
+            <p hidden><input name="bot-field" /></p>
             <div class="form-group">
               <label for="email">Email address</label>
               <input id="email" type="email" name="email" required />

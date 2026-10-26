@@ -30,8 +30,8 @@ results feedback.
 The dashboard is secured with NextAuth and 
 the database used is MongoDB.
 
-![example of quiz questions](/sic-questions-example.png)
-![example of quiz feedback](/sic-results.png)
+![example of quiz questions](../../assets/sic-questions-example.png)
+![example of quiz feedback](../../assets/sic-results.png)
 
 # Purpose/Context
 
@@ -119,8 +119,8 @@ do validation on the client side for good user
 experience, which you can see below.
 I also validate all data on the backend.
 
-![contact form](/sic-contact-form.png)
-![contact form](/sic-contact-form-error.png)
+![contact form](../../assets/sic-contact-form.png)
+![contact form](../../assets/sic-contact-form-error.png)
 
 
 ## Modeling the Data: MongoDB and Prisma
@@ -161,12 +161,12 @@ I fetch all answers from the database (using server side rendering in Next.js), 
 
 I used Recharts, an open source react package based on SVGs, to display all data. 
 
-![web analytics](/sic-analytics.png)
+![web analytics](../../assets/sic-analytics.png)
 
 ## Custom CMS
 I created basic CMS for updating the content of the quiz as well as the feedback. 
 
-![basic CMS view](/sic-questions-cms.png)
+![basic CMS view](../../assets/sic-questions-cms.png)
 
 ## NextAuth
 In order for the admin dashboard to go live,
