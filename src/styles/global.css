@@ -319,6 +319,22 @@
     margin: var(--space-6) auto;
     border-radius: var(--radius);
   }
+
+  /* Consecutive markdown images land in one <p> — lay them out side by side */
+  .case-study-content p:has(> img + img) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--space-6);
+    margin-block: var(--space-6);
+  }
+
+  .case-study-content p:has(> img + img) > img {
+    flex: 0 1 auto;
+    min-width: 0;
+    margin: 0;
+  }
 }
 
 /* ─── Components ────────────────────────────────────────────── */
