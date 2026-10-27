@@ -49,6 +49,7 @@
   /* Layout */
   --max-width:     1400px;
   --content-width: min(88%, var(--max-width));
+  --nav-height:    96px;  /* logo and menu button fill this */
 
   /* Buttons — alias spacing/type tokens so sizing is a single swap point */
   --btn-pad-y:    var(--space-2);   /*  8px */
@@ -62,6 +63,10 @@
   /* Icons — em-based so they scale with the parent's font-size */
   --icon-sm: 0.85em;
   --icon-md: 1.1em;
+}
+
+@media (max-width: 768px) {
+  :root { --nav-height: 60px; }  /* 8px padding each side leaves a 44px tap target */
 }
 
 /* ─── Reset ─────────────────────────────────────────────────── */
@@ -157,11 +162,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: var(--nav-height);
     padding: var(--space-4) 0;
     gap: var(--space-6);
   }
 
-  .nav-logo img { height: var(--space-16); width: auto; }
+  .nav-logo { height: 100%; }
+  .nav-logo img { height: 100%; width: auto; }
 
   .nav-links {
     display: flex;
@@ -189,6 +196,9 @@
     list-style: none;
     cursor: pointer;
     user-select: none;
+    height: 100%;
+    min-width: 44px;  /* tap-target floor, whatever the nav height resolves to */
+    min-height: 44px;
   }
 
   .nav-mobile summary::-webkit-details-marker { display: none; }
@@ -219,7 +229,8 @@
 
   @media (max-width: 768px) {
     .nav-links { display: none; }
-    .nav-mobile { display: block; position: relative; }
+    .nav-mobile { display: block; position: relative; height: 100%; }
+    .nav-inner { padding-block: var(--space-2); }
   }
 
   main { padding-block: var(--space-12); }
