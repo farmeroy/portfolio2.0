@@ -1,8 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('desktop nav', () => {
-  test.skip(({ isMobile }) => isMobile, 'desktop only');
-
+test.describe('desktop nav', { tag: '@desktop' }, () => {
   test('shows the links inline with no menu button', async ({ page }) => {
     await page.goto('/');
     await expect(page.getByRole('navigation').getByRole('link', { name: 'About' })).toBeVisible();
@@ -18,9 +16,7 @@ test.describe('desktop nav', () => {
   });
 });
 
-test.describe('mobile nav', () => {
-  test.skip(({ isMobile }) => !isMobile, 'mobile only');
-
+test.describe('mobile nav', { tag: '@mobile' }, () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
   });

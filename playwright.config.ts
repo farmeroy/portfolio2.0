@@ -10,11 +10,12 @@ export default defineConfig({
     baseURL: 'http://localhost:4321',
     trace: 'on-first-retry',
   },
+  // Untagged tests run everywhere; @desktop / @mobile tests only run on matching projects
   projects: [
-    { name: 'desktop', use: { ...devices['Desktop Chrome'] } },
-    { name: 'mobile-chrome', use: { ...devices['Pixel 7'] } },
+    { name: 'desktop', grepInvert: /@mobile/, use: { ...devices['Desktop Chrome'] } },
+    { name: 'mobile-chrome', grepInvert: /@desktop/, use: { ...devices['Pixel 7'] } },
     // Needs WebKit system libs: `sudo pnpm exec playwright install-deps webkit`
-    { name: 'mobile-safari', use: { ...devices['iPhone 14'] } },
+    { name: 'mobile-safari', grepInvert: /@desktop/, use: { ...devices['iPhone 14'] } },
   ],
   // Test the built static site, not the dev server
   webServer: {
