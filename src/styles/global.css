@@ -256,6 +256,7 @@
     position: fixed;
     bottom: var(--space-6);
     right: var(--space-6);
+    z-index: 100;
     background: var(--color-accent);
     color: var(--color-surface);
     width: var(--space-10);
@@ -266,11 +267,12 @@
     justify-content: center;
     text-decoration: none;
     opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s;
+    /* visibility (not just opacity) so the hidden button can't be tabbed to or read out; delayed so the fade-out plays */
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0s linear 0.2s;
   }
 
-  .back-to-top.visible { opacity: 0.85; pointer-events: auto; }
+  .back-to-top.visible { opacity: 0.85; visibility: visible; transition-delay: 0s; }
   .back-to-top:hover { opacity: 1; }
 
   /* Hero */

@@ -57,4 +57,10 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
   const show = () => btn.classList.toggle('visible', window.scrollY > 300);
   window.addEventListener('scroll', show, { passive: true });
   show();
+  // Scroll in JS rather than via the #top fragment — mobile Safari doesn't reliably jump to the empty anchor
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+  });
 </script>

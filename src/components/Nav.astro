@@ -15,7 +15,7 @@ const external = [
 ---
 <nav>
   <div class="nav-inner">
-    <a href="/" class="nav-logo" aria-label="Home">
+    <a href="/" class="nav-logo" aria-label="Raffaele Cataldo, home">
       <img src="/R.svg" alt="RC logo" />
     </a>
     <ul class="nav-links">
@@ -46,9 +46,13 @@ const external = [
 
 <script>
   const navMobile = document.querySelector('.nav-mobile') as HTMLDetailsElement;
-  // Close on any click except the toggle itself, so tapping a link inside the dropdown closes it too
-  document.addEventListener('click', (e) => {
-    if (!(e.target as Element).closest('.nav-mobile summary')) navMobile.open = false;
+  // pointerdown, not click — iOS Safari doesn't fire click for taps on non-interactive content
+  document.addEventListener('pointerdown', (e) => {
+    if (!(e.target as Element).closest('.nav-mobile')) navMobile.open = false;
+  });
+  // Links inside the dropdown close it on click, so the menu stays put until the tap lands
+  navMobile.querySelector('.nav-dropdown')!.addEventListener('click', (e) => {
+    if ((e.target as Element).closest('a')) navMobile.open = false;
   });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') navMobile.open = false;
