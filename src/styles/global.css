@@ -205,13 +205,13 @@
 
   .nav-mobile .nav-dropdown {
     position: absolute;
-    top: 100%;
+    top: 110%;
     right: 0;
     background: var(--color-surface);
     border: 1px solid var(--color-border);
-    border-top: none;
     min-width: 180px;
     z-index: 101;
+    border-radius: 4px;
   }
 
   .nav-mobile .nav-dropdown a {
