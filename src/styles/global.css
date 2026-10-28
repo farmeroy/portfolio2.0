@@ -25,7 +25,7 @@
   --text-xl:   1.5rem;    /* 24px — card titles */
   --text-h3:   1.75rem;   /* 28px */
   --text-h2:   clamp(2rem, 3.5vw, 2.75rem);   /* 32–44px — section headings */
-  --text-h1:   clamp(2.5rem, 5vw, 3.75rem);   /* 40–60px — hero name */
+  --text-h1:   clamp(2.5rem, 5vw, 3.75rem);   /* 40–60px */
 
   /* Spacing — 4px base */
   --space-1:  0.25rem;   /*  4px */
@@ -54,11 +54,8 @@
   /* Buttons — alias spacing/type tokens so sizing is a single swap point */
   --btn-pad-y:    var(--space-2);   /*  8px */
   --btn-pad-x:    var(--space-4);   /* 16px */
-  --btn-font:     var(--text-sm);   /* 14px */
+  --btn-font:     var(--text-base); /* 18px — match body copy */
 
-  --btn-pad-y-lg: var(--space-3);   /* 12px */
-  --btn-pad-x-lg: var(--space-5);   /* 20px */
-  --btn-font-lg:  var(--text-base); /* 18px — matches body/card text */
 
   /* Icons — em-based so they scale with the parent's font-size */
   --icon-sm: 0.85em;
@@ -197,9 +194,7 @@
     list-style: none;
     cursor: pointer;
     user-select: none;
-    height: 100%;
-    min-width: 44px;  /* tap-target floor, whatever the nav height resolves to */
-    min-height: 44px;
+    align-self: center;
   }
 
   .nav-mobile summary::-webkit-details-marker { display: none; }
@@ -230,7 +225,7 @@
 
   @media (max-width: 768px) {
     .nav-links { display: none; }
-    .nav-mobile { display: block; position: relative; height: 100%; }
+    .nav-mobile { display: flex; align-items: center; position: relative; height: 100%; }
     .nav-inner { padding-block: var(--space-2); }
   }
 
@@ -286,23 +281,6 @@
 
   .back-to-top.visible { opacity: 0.85; visibility: visible; transition-delay: 0s; }
   .back-to-top:hover { opacity: 1; }
-
-  /* Hero */
-  .hero {
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .hero p { font-size: var(--text-lg); }
-
-  .hero-actions {
-    display: flex;
-    gap: var(--space-4);
-    flex-wrap: wrap;
-    margin-top: var(--space-8);
-  }
 
   /* About */
   .about-content {
@@ -389,13 +367,9 @@
     border-color: var(--color-accent);
   }
 
-  .btn-lg {
-    padding: var(--btn-pad-y-lg) var(--btn-pad-x-lg);
-    font-size: var(--btn-font-lg);
-  }
 
   .btn-icon { padding: var(--btn-pad-y); aspect-ratio: 1; }
-  .btn-icon.btn-lg { padding: var(--btn-pad-y-lg); }
+
 
   .btn svg { width: var(--icon-sm); height: var(--icon-sm); flex: none; }
   .btn-icon svg { width: var(--icon-md); height: var(--icon-md); }

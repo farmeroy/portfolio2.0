@@ -4,8 +4,8 @@ title: About
 
 Hi! I'm Raffaele — a software engineer based in Northern California.
 
-In my most recent role, I was responsible for the user facing web application
-on top of a [data migration/modernization engine](https://www.snaplogic.com/products/slim).
+In my most recent role, I was responsible for the 
+the user-facing app for SnapLogic’s data modernization platform.
 I worked with Django, [htmx](https://htmx.org/), and web components, shipping fast on a small team, and backing myself up with a big ol' behavioral test suite.
 
 I've also done plenty of work with Next.js, React, and of course TypeScript. 
