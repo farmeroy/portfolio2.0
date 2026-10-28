@@ -1,46 +1,28 @@
 ---
 import { Image } from 'astro:assets';
+import { getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import projects from '../data/projects';
 import Contact from '../components/Contact.astro';
 import portrait from '../assets/portrait1bw.JPG';
+
+const aboutEntry = await getEntry('about', 'index');
+const { Content } = await render(aboutEntry);
 ---
 <Base title="Raffaele Cataldo - Developer">
   <div class="page-wrapper">
     <main>
 
-      <section class="hero">
-        <h1>Raffaele Cataldo</h1>
-        <p>
-        I'm a full stack developer, experienced with React, Next.js, Django, and HTMX<br /><br />
-          I love ambitious goals, a bit of adventure, and close companions.
-        </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">Check Out my Portfolio</a>
-          <a href="https://github.com/farmeroy" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Check out my GitHub</a>
-        </div>
-      </section>
-
       <section id="about">
-        <h2>About Me</h2>
-        <div class="about-grid">
-          <div class="about-text">
-            <p>
-              I enjoy creating intuitive user experiences, refactoring complicated code, and solving problems of every shape and dimension.
-            </p>
-            <p>
-              Before becoming a software developer I was a jazz violinist and absolutely thrive on small teams where we take turns leading and supporting: that is essentially what improvised music is, to me that is the essence of the creative process, no matter what the medium.
-            </p>
-            <p>
-              I love learning new things and having new experiences. Currently, I'm excited about using Rust to build performant, stable, and scalable systems, furthering my knowledge of databases and data modeling, and working towards a BSc of Computer Science through the Open University.
-            </p>
-            <a href="/Cataldo-Raffaele-CV.pdf" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 1rem;">
-              Download Resume
-            </a>
-          </div>
+        <h1>Raffaele Cataldo</h1>
+        <div class="about-content">
           <div class="about-portrait">
             <Image src={portrait} alt="A portrait of Raffaele Cataldo" width={360} height={360} />
           </div>
+          <Content />
+          <a href="/Cataldo-Raffaele-CV.pdf" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 1rem;">
+            Download Resume
+          </a>
         </div>
       </section>
 

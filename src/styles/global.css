@@ -305,11 +305,13 @@
   }
 
   /* About */
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: var(--space-8) var(--space-12);
-    align-items: start;
+  .about-content {
+    overflow: hidden;
+  }
+
+  .about-portrait {
+    float: right;
+    margin: 0 0 var(--space-6) var(--space-8);
   }
 
   .about-portrait img {
@@ -321,7 +323,11 @@
   }
 
   @media (max-width: 640px) {
-    .about-grid { grid-template-columns: 1fr; }
+    .about-portrait {
+      float: none;
+      margin: 0 auto var(--space-6);
+      text-align: center;
+    }
     .about-portrait img { width: 200px; height: 200px; }
   }
 
