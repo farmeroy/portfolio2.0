@@ -1,0 +1,6 @@
+allowBuilds:
+  esbuild: false
+  sharp: false
+minimumReleaseAgeExclude:
+  - '@ascii-web/client@0.9.0 || 0.9.1'
+  - '@ascii-web/wasm@0.9.0 || 0.9.1'

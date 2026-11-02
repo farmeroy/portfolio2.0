@@ -33,6 +33,9 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;600&family=Ubuntu+Mono:wght@400&display=swap" rel="stylesheet" />
+    <style is:global>
+      @import '../styles/global.css';
+    </style>
   </head>
   <body>
     <a id="top"></a>
@@ -45,14 +48,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
         <polyline points="18 15 12 9 6 15"></polyline>
       </svg>
     </a>
-  </body>
-</html>
-
-<style is:global>
-  @import '../styles/global.css';
-</style>
-
-<script>
+    <script>
   const btn = document.querySelector('.back-to-top') as HTMLElement;
   const show = () => btn.classList.toggle('visible', window.scrollY > 300);
   window.addEventListener('scroll', show, { passive: true });
@@ -63,4 +59,6 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
     const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
   });
-</script>
+    </script>
+  </body>
+</html>

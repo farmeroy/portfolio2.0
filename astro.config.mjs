@@ -5,4 +5,14 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://raffaelecataldo.com',
   output: 'static',
+  vite: {
+    optimizeDeps: {
+      exclude: ['@ascii-web/client', '@ascii-web/wasm'],
+    },
+    server: {
+      fs: {
+        allow: ['../..'],
+      },
+    },
+  },
 });
