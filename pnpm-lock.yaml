@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@ascii-web/client':
+        specifier: ^0.9.1
+        version: 0.9.1
       astro:
         specifier: ^6.1.8
         version: 6.1.8(rollup@4.60.2)
@@ -20,6 +23,12 @@ importers:
         version: 1.64.1
 
 packages:
+
+  '@ascii-web/client@0.9.1':
+    resolution: {integrity: sha512-0sWmKpLkq+Ctk1xu0nf6ajzj8aHLwhELqyXwRCdiDJsIyAxLjCYxWtBho7GXGQm8xFD+HCZXOnQ3bnkzlR7nVw==}
+
+  '@ascii-web/wasm@0.9.1':
+    resolution: {integrity: sha512-HywFn4ZyuRc+uSKyOtXx/q5Innn8ykIfJ0bpXkGZiuHoA5FqzVycSjwYFICUiagP4bxYzG8GmCb7jzioMJNJyg==}
 
   '@astrojs/compiler@3.0.1':
     resolution: {integrity: sha512-z97oYbdebO5aoWzuJ/8q5hLK232+17KcLZ7cJ8BCWk6+qNzVxn/gftC0KzMBUTD8WAaBkPpNSQK6PXLnNrZ0CA==}
@@ -589,6 +598,7 @@ packages:
 
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
+    deprecated: Potential CWE-502 - Update to 1.3.1 or higher
 
   anymatch@3.1.3:
     resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
@@ -1249,6 +1259,7 @@ packages:
   tsconfck@3.1.6:
     resolution: {integrity: sha512-ks6Vjr/jEw0P1gmOVwutM3B7fWxoWBL2KRDb1JfqGVawBmO5UsvmWOQFGHBPl5yxYz4eERr19E6L7NMv+Fej4w==}
     engines: {node: ^18 || >=20}
+    deprecated: unmaintained
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
@@ -1445,6 +1456,12 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
 snapshots:
+
+  '@ascii-web/client@0.9.1':
+    dependencies:
+      '@ascii-web/wasm': 0.9.1
+
+  '@ascii-web/wasm@0.9.1': {}
 
   '@astrojs/compiler@3.0.1': {}
 

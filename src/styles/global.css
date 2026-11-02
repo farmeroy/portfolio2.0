@@ -56,15 +56,23 @@
   --btn-pad-x:    var(--space-4);   /* 16px */
   --btn-font:     var(--text-base); /* 18px — match body copy */
 
-
   /* Icons — em-based so they scale with the parent's font-size */
   --icon-sm: 0.85em;
   --icon-md: 1.1em;
   --icon-stroke: 2px;  /* line weight shared by the logo and menu icon */
+
+  /* Ascii img tokens */
+  --rascii-bg: var(--color-deep);
+  --rascii-color: var(--color-accent);
+  --rascii-font-size: 8px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   :root { --nav-height: 60px; }  /* 8px padding each side leaves a 44px tap target */
+}
+
+@media (min-width: 2000px) {
+  :root { --max-width: 2400px; }
 }
 
 /* ─── Reset ─────────────────────────────────────────────────── */
@@ -282,31 +290,33 @@
   .back-to-top.visible { opacity: 0.85; visibility: visible; transition-delay: 0s; }
   .back-to-top:hover { opacity: 1; }
 
-  /* About */
+  /* About — mobile first */
   .about-content {
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
 
   .about-portrait {
-    float: right;
-    margin: 0 0 var(--space-6) var(--space-8);
-  }
-
-  .about-portrait img {
-    width: 280px;
-    height: 280px;
-    object-fit: cover;
+    width: 100%;
+    order: -1;
+    background: var(--rascii-bg);
     border-radius: var(--radius);
     border: 1px solid var(--color-border-strong);
+    padding: var(--space-4) var(--space-1);
   }
 
-  @media (max-width: 640px) {
-    .about-portrait {
-      float: none;
-      margin: 0 auto var(--space-6);
-      text-align: center;
+  @media (min-width: 769px) {
+    .about-content {
+      display: flow-root;
     }
-    .about-portrait img { width: 200px; height: 200px; }
+    .about-portrait {
+      float: right;
+      width: 40%;
+      min-height: auto;
+      aspect-ratio: 1;
+      margin: 0 0 var(--space-6) var(--space-8);
+      order: unset;
+    }
   }
 
   /* Case study */
@@ -337,6 +347,8 @@
 
 /* ─── Components ────────────────────────────────────────────── */
 @layer components {
+  ascii-img:not(:defined) { display: none; }
+
   /* Buttons */
   .btn {
     display: inline-flex;
@@ -366,7 +378,6 @@
     color: var(--color-accent);
     border-color: var(--color-accent);
   }
-
 
   .btn-icon { padding: var(--btn-pad-y); aspect-ratio: 1; }
 
