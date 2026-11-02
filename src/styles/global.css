@@ -62,9 +62,9 @@
   --icon-stroke: 2px;  /* line weight shared by the logo and menu icon */
 
   /* Ascii img tokens */
-  --rascii-bg: var(--color-deep);
-  --rascii-color: var(--color-accent);
-  --rascii-font-size: 8px;
+  --ascii-bg: var(--color-deep);
+  --ascii-color: var(--color-accent);
+  --ascii-font-size: 8px;
 }
 
 @media (max-width: 800px) {
@@ -299,7 +299,7 @@
   .about-portrait {
     width: 100%;
     order: -1;
-    background: var(--rascii-bg);
+    background: var(--ascii-bg);
     border-radius: var(--radius);
     border: 1px solid var(--color-border-strong);
     padding: var(--space-4) var(--space-1);
