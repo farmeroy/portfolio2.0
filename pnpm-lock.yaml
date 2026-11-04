@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@ascii-web/client':
-        specifier: ^0.9.1
-        version: 0.9.1
+        specifier: ^0.9.2
+        version: 0.9.2
       astro:
         specifier: ^6.1.8
         version: 6.1.8(rollup@4.60.2)
@@ -24,11 +24,11 @@ importers:
 
 packages:
 
-  '@ascii-web/client@0.9.1':
-    resolution: {integrity: sha512-0sWmKpLkq+Ctk1xu0nf6ajzj8aHLwhELqyXwRCdiDJsIyAxLjCYxWtBho7GXGQm8xFD+HCZXOnQ3bnkzlR7nVw==}
+  '@ascii-web/client@0.9.2':
+    resolution: {integrity: sha512-0b/i+2ofP9sAY9ErvfW7FUT3DQ2u3wZsSeVl6+IeYGDLT46wI+6EMlsAyXaRKf+6bVoUDbBzxrEoEQk8xi4BtQ==}
 
-  '@ascii-web/wasm@0.9.1':
-    resolution: {integrity: sha512-HywFn4ZyuRc+uSKyOtXx/q5Innn8ykIfJ0bpXkGZiuHoA5FqzVycSjwYFICUiagP4bxYzG8GmCb7jzioMJNJyg==}
+  '@ascii-web/wasm@0.9.2':
+    resolution: {integrity: sha512-KumYEnrLpktmTiV2I+x16PIR5fYIVbjZh/elsD1UV9bWSmj+b9lo9UxhcV9Xwoo5wF5C1phnSUyLPEIEgbspeg==}
 
   '@astrojs/compiler@3.0.1':
     resolution: {integrity: sha512-z97oYbdebO5aoWzuJ/8q5hLK232+17KcLZ7cJ8BCWk6+qNzVxn/gftC0KzMBUTD8WAaBkPpNSQK6PXLnNrZ0CA==}
@@ -1457,11 +1457,11 @@ packages:
 
 snapshots:
 
-  '@ascii-web/client@0.9.1':
+  '@ascii-web/client@0.9.2':
     dependencies:
-      '@ascii-web/wasm': 0.9.1
+      '@ascii-web/wasm': 0.9.2
 
-  '@ascii-web/wasm@0.9.1': {}
+  '@ascii-web/wasm@0.9.2': {}
 
   '@astrojs/compiler@3.0.1': {}
 
