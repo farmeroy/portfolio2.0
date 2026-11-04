@@ -4,11 +4,12 @@ title: About
 
 Hi! I'm Raffaele — a software engineer based in Northern California.
 
-In my most recent role, I was responsible for the 
-the user-facing app for SnapLogic’s data modernization platform.
-I worked with Django, [htmx](https://htmx.org/), and web components, shipping fast on a small team, and backing myself up with a big ol' behavioral test suite.
+In my most recent role, 
+I owned the user-facing app for an enterprise data modernization platform.
+I worked with Django, [htmx](https://htmx.org/), and web components,
+shipping fast on a small team, and backing myself up with a big ol' behavioral test suite.
 
-I've also done plenty of work with Next.js, React, and of course TypeScript. 
+I've also done plenty of work with Next.js, React, and of course TypeScript in a variety of domains, including healthcare and fintech.
 
 Before software engineering, I was a jazz and folk violinist.
 I lived for a _long_ time in Berlin, Germany (Kreuzberg still feels like home!) 
