@@ -65,6 +65,7 @@
   --ascii-bg: var(--color-deep);
   --ascii-color: var(--color-accent);
   --ascii-font-size: 12px;
+  --ascii-font-family: var(--font-heading);
 }
 
 @media (max-width: 800px) {
