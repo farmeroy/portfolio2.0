@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@ascii-web/client':
-        specifier: ^0.9.2
-        version: 0.9.2
+        specifier: ^0.9.3
+        version: 0.9.3
       astro:
         specifier: ^6.1.8
         version: 6.1.8(rollup@4.60.2)
@@ -24,8 +24,8 @@ importers:
 
 packages:
 
-  '@ascii-web/client@0.9.2':
-    resolution: {integrity: sha512-0b/i+2ofP9sAY9ErvfW7FUT3DQ2u3wZsSeVl6+IeYGDLT46wI+6EMlsAyXaRKf+6bVoUDbBzxrEoEQk8xi4BtQ==}
+  '@ascii-web/client@0.9.3':
+    resolution: {integrity: sha512-FAshXiswfCerKdFY4hh7A8gWwYZkxyG97U8fp0ofOg13fvH4gMPy17BYkADwxu6tmtRCgT6Nut/EkbtKd0blZg==}
 
   '@ascii-web/wasm@0.9.2':
     resolution: {integrity: sha512-KumYEnrLpktmTiV2I+x16PIR5fYIVbjZh/elsD1UV9bWSmj+b9lo9UxhcV9Xwoo5wF5C1phnSUyLPEIEgbspeg==}
@@ -1457,7 +1457,7 @@ packages:
 
 snapshots:
 
-  '@ascii-web/client@0.9.2':
+  '@ascii-web/client@0.9.3':
     dependencies:
       '@ascii-web/wasm': 0.9.2
 
