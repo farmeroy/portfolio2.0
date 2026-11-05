@@ -13,7 +13,7 @@
     "test": "playwright test"
   },
   "dependencies": {
-    "@ascii-web/client": "^0.9.3",
+    "@ascii-web/client": "^0.9.4",
     "astro": "^6.1.8",
     "sharp": "^0.34.5"
   },
